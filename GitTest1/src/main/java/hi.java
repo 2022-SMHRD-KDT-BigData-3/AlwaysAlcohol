@@ -2,7 +2,8 @@
 public class hi {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		System.out.println("기택 커밋");
+		System.out.println("난 잘 모르겠다 ~~");
 
 	}
 
