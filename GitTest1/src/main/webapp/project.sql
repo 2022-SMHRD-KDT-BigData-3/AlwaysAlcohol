@@ -67,7 +67,7 @@ SELECT * FROM recipe;
 SELECT * FROM fav_list;
 SELECT * FROM reply;
 
-
+INSERT INTO member VALUES();
 
 
 
