@@ -5,6 +5,8 @@ public class hi {
 		System.out.println("기택 커밋");
 		System.out.println("난 잘 모르겠다 ~~");
 		System.out.println("퇴근");
+		System.out.println("뭐냐");
+		
 		
 
 	}
