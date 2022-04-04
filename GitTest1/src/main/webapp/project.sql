@@ -35,8 +35,7 @@ CREATE TABLE base
 CREATE TABLE taste
 (taste_id NUMBER(10),
  taste_info VARCHAR(20) NOT NULL,
- taste_info2 VARCHAR(20),
- taste_info3 VARCHAR(20),
+ taste_info2 VARCHAR(20)
  CONSTRAINT taste_id_pk PRIMARY KEY(taste_id));
  
 --칵테일
@@ -83,6 +82,7 @@ CREATE TABLE reply
  CONSTRAINT reply_mem_fk FOREIGN KEY(member_id) REFERENCES member(member_id),
  CONSTRAINT reply_cock_fk FOREIGN KEY(cocktail_id) REFERENCES cocktail(cocktail_id));
  
+ --사용자의 선호
 CREATE TABLE fav_list
 (flist_id NUMBER(30),
  member_id VARCHAR(15),
