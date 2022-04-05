@@ -29,14 +29,14 @@
             background-size:cover;
             padding:0;
         }
-        #login{
+        #join{
             width:600px;
             height: 600px;
             margin:0 auto;
             /* position: relative; */
             /* background:#ddd; */
         }
-        #login_form{
+        #join_form{
             /* text-align:center; */
             border-radius: 10px;
             padding:30px 50px;
@@ -47,7 +47,7 @@
             left:50%;
             transform: translate(-50%, -50%);
         }
-        .login{
+        .join{
             font-size:25px;
             font-weight: 900;
             color:#333;
@@ -117,14 +117,10 @@
 <body>
 <body>
     <div id="con">
-    <div id="login">
-    <div id="login_form"><!--로그인 폼-->
+    <div id="join">
+    <div id="join_form"><!--회원가입 폼-->
     <form>
-        <h3 class="login" style="letter-spacing:-1px;">Sign up</h3>
-
-        <!-- <p>
-            <input type="submit" value="Sign in with Google" class="btn" style="background-color:#217Af0">
-        </p> 구글로 로그인-->
+        <h3 class="join" style="letter-spacing:-1px;">Sign up</h3>
 
         <hr>
 
@@ -165,6 +161,27 @@
         </label> <!--이메일-->  
 
 
+		 <!-- 선호도(맛) 체크 -->
+		 <label>
+		<p style="text-align: left; font-size:12px; color:#666"> 선호 맛</p>
+		
+        <input type="checkbox" name = "taste" value = "고소한 맛" class="size3" style="font-family: 'Noto Sans KR';"> 고소한 맛
+        <input type="checkbox" name = "taste" value = "깔끔한 맛" class="size3" style="font-family: 'Noto Sans KR';"> 깔끔한 맛
+        <input type="checkbox" name = "taste" value = "달콤한 맛" class="size3" style="font-family: 'Noto Sans KR';"> 달콤한 맛
+        <input type="checkbox" name = "taste" value = "부드러운 맛" class="size3 style="font-family: 'Noto Sans KR';""> 부드러운 맛 <br>
+        <input type="checkbox" name = "taste" value = "상쾌한 맛" class="size3" style="font-family: 'Noto Sans KR';"> 상쾌한 맛 
+        <input type="checkbox" name = "taste" value = "상큼한 맛" class="size3" style="font-family: 'Noto Sans KR';"> 상큼한 맛
+        <input type="checkbox" name = "taste" value = "깔끔한 맛" class="size3" style="font-family: 'Noto Sans KR';"> 깔끔한 맛
+        <input type="checkbox" name = "taste" value = "씁쓸한 맛" class="size3" style="font-family: 'Noto Sans KR';"> 씁쓸한 맛
+		 </label><!-- 선호도 체크 : 맛-->
+		
+		<br>
+		<!-- 선호도(도수) -->
+		 <label>
+		<p style="text-align: left; font-size:12px; color:#666"> 선호 도수</p>
+        <input type="number" name = "alcoholicity"> 
+        </label><!-- 선호도 체크 : 맛-->
+		
     <br>
         <p>
             <input type="submit" value="Create Acoout" class="btn">
