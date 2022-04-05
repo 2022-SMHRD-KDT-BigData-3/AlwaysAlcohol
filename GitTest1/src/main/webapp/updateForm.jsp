@@ -120,7 +120,7 @@
 <body>
     <div id="con">
     <div id="Update">
-    <div id="Update_form"><!--로그인 폼-->
+    <div id="Update_form"><!--회원정보수정 폼-->
     <form>
         <h3 class="Update" style="letter-spacing:-1px;">회원정보수정</h3>
 
@@ -171,7 +171,7 @@
 
     <hr>
     <p class="fine">
-        <span><a href="index.html" > home으로 이동</a></span>
+        <span><a href="index.html" > Main page로 이동</a></span>
     </p>
     </div>
     <div>
