@@ -56,6 +56,7 @@ CREATE TABLE wine
  body_id NUMBER(10),
  country_id NUMBER(10),
  proof NUMBER(10) NOT NULL,
+ img VARCHAR2(100) NOT NULL,
  CONSTRAINT wine_id_pk PRIMARY KEY(wine_id),
  CONSTRAINT wine_sweet_fk FOREIGN KEY(sweet_id) REFERENCES sweet(sweet_id),
  CONSTRAINT wine_kind_fk FOREIGN KEY(kind_id) REFERENCES kind(kind_id),
