@@ -28,22 +28,6 @@
     color:  #FFFF; 
     } 
 
-/* 
-#voteUp,#voteDown{ width: 3.5em; height: 1.9em; background-color: aqua; }
-
-#comments{ margin-top: 10px; } .eachComment{ width :50%; margin: 10px;padding: 0.5em; border-bottom: 1px solid #c1bcba; } 
-
-.eachComment .name{font-size: 1.5em; font-weight: bold; margin-bottom: 0.3em; display:flex; justify-content: space-between; } 
-
-.eachComment .inputValue{font-size: 1.2em; font-style: italic; } 
-
-.eachComment .time{ font-size:0.7em; color: #c1bcba; font-style: oblique; margin-top: 0.5em;margin-bottom: 0.5em; } 
-
-.eachComment .voteDiv{ display: flex;justify-content: flex-end; } 
-
-.eachComment .deleteComment{background-color: red; color: aliceblue; } */
-
-
 *{
 	text-align:center;
 	position: relative;
@@ -56,6 +40,8 @@
  text-align: inherit;
 }
 
+
+/* 표 */
 table {
 	text-align: center;
 	width:60%;
@@ -75,8 +61,11 @@ table, td, th {
 .tg .tg-thmd{background-color:#ffcb2f;border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 
-
-</style>
+/* 별 */
+<!-- .star-rating{width:200px}
+.star-rating,.star-rating span{padding:10px; display:inline-block; height:39px; overflow:hidden; background:url(star.png)no-repeat;}
+.star-rating span{background-position:left bottom; line-height:0; vertical-align:top;}
+</style> -->
 </head>
 <body>
 
@@ -130,8 +119,14 @@ table, td, th {
 
 
 <!-- 임시 별 평점 -->
+<!-- <span class="star-rating">
+<span style = "width:50%"></span>
+</span> -->
 
-		<!-- 댓글기능  -->
+
+
+
+<!-- 댓글기능  -->
 	<div class="form-commentInfo">
 		<div  class="count" id="comment-count">
 			댓글 <span id="count">0</span>
