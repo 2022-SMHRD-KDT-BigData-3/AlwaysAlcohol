@@ -11,7 +11,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/search.css" />
+<link rel="stylesheet" href="assets/css/button.css" />
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
@@ -23,6 +23,7 @@
 		<!-- Header -->
 		<header id="header">
 			<div class="inner">
+			
 			<!-- 검색창 -->
 				<form action="" class="search-bar">
 					<input type="search" name="search" pattern=".*\S.*" required>
@@ -30,6 +31,7 @@
 						<span>Search</span>
 					</button>
 				</form>
+			
 				<!-- Logo -->
 				<a href="index.html" class="logo"> <span class="symbol"><img
 						src="images/logo.png" alt="" /></span><span class="title">Wine
@@ -61,16 +63,23 @@
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
-				<header>
-					<h1>
-						무슨 와인을 마실 지<br> 더이상 고민하지 마세요.
-					</h1>
-					<p>회원님의 취향과 선호도를 분석하여 저희가 추천해드리겠습니다.</p>
+			<!-- 주류 추천 페이지로 이동 -->
+				<header style="text-align: center;">
+				<button class="button1" id="move_wine">
+				
+					<h1><a href="elements.html">무슨 와인을 마실 지<br> 더이상 고민하지 마세요.</a></h1>
+					</button>
+					
+					<br><br>
+					<p style="margin-bottom: 5px;">회원님의 취향과 선호도를 분석하여 저희가 추천해드리겠습니다.</p>
 				</header>
+				</button>
+				
+				
 				<section class="tiles">
 					<article class="style1">
 						<span class="image"> <img src="images/red2.jpg" alt="" />
-						</span> <a href="generic.html">
+						</span> <a href="redWine.html">
 							<h2>레드 와인</h2>
 							<div class="content">
 								<p>레드 와인 설명 글</p>
