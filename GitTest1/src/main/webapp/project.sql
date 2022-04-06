@@ -60,7 +60,7 @@ CREATE TABLE tanin
 (tanin_id NUMBER(10),
  tanin_name VARCHAR(20) NOT NULL,
  CONSTRAINT tanin_id_pk PRIMARY KEY(tanin_id));
- 
+ select kind_name from kind;
 --와인
 CREATE TABLE wine
 (wine_id NUMBER(10),
