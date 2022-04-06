@@ -1,5 +1,15 @@
 --프로젝트DB의 테이블은 전부 삭제했습니다
---사용하지 않을 예정인 사용자의 선호 테이블을 주석처리했습니다
+--사용자 테이블과 이와 관련된 테이블의 경우 사용하지 않을 수도 있습니다
+
+DROP TABLE member CASCADE CONSTRAINTS;
+DROP TABLE body CASCADE CONSTRAINTS;
+DROP TABLE sweet CASCADE CONSTRAINTS;
+DROP TABLE country CASCADE CONSTRAINTS;
+DROP TABLE cultivar CASCADE CONSTRAINTS;
+DROP TABLE kind CASCADE CONSTRAINTS;
+DROP TABLE wine CASCADE CONSTRAINTS;
+DROP TABLE reply CASCADE CONSTRAINTS;
+DROP TABLE push CASCADE CONSTRAINTS;
 
 --사용자
 -- 남자 : 0, 여자 : 1
@@ -13,6 +23,12 @@ CREATE TABLE member
  join_date DATE DEFAULT SYSDATE NOT NULL,
  CONSTRAINT mem_id_pk PRIMARY KEY(member_id),
  CONSTRAINT mem_gender_ck CHECK(gender IN('0','1')));
+ 
+--산도
+CREATE TABLE acid
+(acid_id NUMBER(10),
+ acid_rate NUMBER(10) NOT NULL,
+ CONSTRAINT acid_id_pk PRIMARY KEY(acid_id));
  
 --바디감
 CREATE TABLE body
