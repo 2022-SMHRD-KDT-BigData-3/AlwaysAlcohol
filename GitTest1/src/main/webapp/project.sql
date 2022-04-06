@@ -5,11 +5,12 @@ DROP TABLE member CASCADE CONSTRAINTS;
 DROP TABLE body CASCADE CONSTRAINTS;
 DROP TABLE sweet CASCADE CONSTRAINTS;
 DROP TABLE country CASCADE CONSTRAINTS;
-DROP TABLE cultivar CASCADE CONSTRAINTS;
 DROP TABLE kind CASCADE CONSTRAINTS;
 DROP TABLE wine CASCADE CONSTRAINTS;
 DROP TABLE reply CASCADE CONSTRAINTS;
 DROP TABLE push CASCADE CONSTRAINTS;
+DROP TABLE tanin CASCADE CONSTRAINTS;
+DROP TABLE acid CASCADE CONSTRAINTS;
 
 --사용자
 -- 남자 : 0, 여자 : 1
@@ -27,21 +28,19 @@ CREATE TABLE member
 --산도
 CREATE TABLE acid
 (acid_id NUMBER(10),
- acid_rate NUMBER(10) NOT NULL,
+ acid_name VARCHAR2(20) NOT NULL,
  CONSTRAINT acid_id_pk PRIMARY KEY(acid_id));
  
 --바디감
 CREATE TABLE body
 (body_id NUMBER(10),
- body_name VARCHAR2(10) NOT NULL,
- body_rate NUMBER(10) NOT NULL,
+ body_name VARCHAR2(30) NOT NULL,
  CONSTRAINT body_id_pk PRIMARY KEY(body_id));
  
 --당도
 CREATE TABLE sweet
 (sweet_id NUMBER(10),
- sweet_name VARCHAR2(10),
- sweet_rate NUMBER(10) NOT NULL,
+ sweet_name VARCHAR2(10) NOT NULL,
  CONSTRAINT sweet_id_pk PRIMARY KEY(sweet_id));
  
 --국가
@@ -49,12 +48,6 @@ CREATE TABLE country
 (country_id NUMBER(10),
  county_name VARCHAR2(10) NOT NULL,
  CONSTRAINT country_id_pk PRIMARY KEY(country_id));
-
---품종
-CREATE TABLE cultivar
-(cultivar_id NUMBER(10),
- cultivar_name VARCHAR2(10) NOT NULL,
- CONSTRAINT cultivar_id_pk PRIMARY KEY(cultivar_id));
  
 --종류
 CREATE TABLE kind
@@ -62,23 +55,33 @@ CREATE TABLE kind
  kind_name VARCHAR2(10) NOT NULL,
  CONSTRAINT kind_id_pk PRIMARY KEY(kind_id));
  
+--타닌
+CREATE TABLE tanin
+(tanin_id NUMBER(10),
+ tanin_name VARCHAR(20) NOT NULL,
+ CONSTRAINT tanin_id_pk PRIMARY KEY(tanin_id));
+ 
 --와인
 CREATE TABLE wine
 (wine_id NUMBER(10),
  wine_name VARCHAR2(10) NOT NULL,
- sweet_id NUMBER(10),
  kind_id NUMBER(10),
- cultivar_id NUMBER(10),
- body_id NUMBER(10),
  country_id NUMBER(10),
- proof NUMBER(10) NOT NULL,
- img VARCHAR2(100) NOT NULL,
+ cultivar VARCHAR2(50),
+ sweet_id NUMBER(10),
+ acid_id NUMBER(10),
+ body_id NUMBER(10),
+ tanin_id NUMBER(10),
+ proof VARCHAR2(20),
+ price VARCHAR2(20),
+ img VARCHAR2(200) NOT NULL,
  CONSTRAINT wine_id_pk PRIMARY KEY(wine_id),
- CONSTRAINT wine_sweet_fk FOREIGN KEY(sweet_id) REFERENCES sweet(sweet_id),
  CONSTRAINT wine_kind_fk FOREIGN KEY(kind_id) REFERENCES kind(kind_id),
- CONSTRAINT wine_cultivar_fk FOREIGN KEY(cultivar_id) REFERENCES cultivar(cultivar_id),
+ CONSTRAINT wine_country_fk FOREIGN KEY(country_id) REFERENCES country(country_id),
+ CONSTRAINT wine_sweet_fk FOREIGN KEY(sweet_id) REFERENCES sweet(sweet_id),
+ CONSTRAINT wine_acid_fk FOREIGN KEY(acid_id) REFERENCES acid(acid_id),
  CONSTRAINT wine_body_fk FOREIGN KEY(body_id) REFERENCES body(body_id),
- CONSTRAINT wine_country_fk FOREIGN KEY(country_id) REFERENCES country(country_id));
+ CONSTRAINT wine_tanin_fk FOREIGN KEY(tanin_id) REFERENCES tanin(tanin_id));
  
 --와인 댓글(평가 포함)
 CREATE TABLE reply
@@ -101,15 +104,8 @@ CREATE TABLE push
  CONSTRAINT push_id_pk PRIMARY KEY(push_id),
  CONSTRAINT push_mem_fk FOREIGN KEY(member_id) REFERENCES member(member_id),
  CONSTRAINT push_cock_fk FOREIGN KEY(wine_id) REFERENCES wine(wine_id));
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+ 
+ select * from ACID;
+ select * from BODY;
+ 
