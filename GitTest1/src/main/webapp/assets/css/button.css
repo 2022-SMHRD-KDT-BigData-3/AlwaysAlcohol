@@ -203,3 +203,10 @@ p {
   color: white;
 }
 
+/* 앞으로 뒤고 이동 */
+.pagination {
+    position: relative;
+    right: center;
+    left: 50%;
+    right: 50%;
+}

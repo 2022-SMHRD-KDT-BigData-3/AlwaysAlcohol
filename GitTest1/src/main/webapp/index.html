@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-   Phantom by HTML5 UP
-   html5up.net | @ajlkn
-   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 <head>
 <title>Wine Plan</title>
@@ -12,9 +8,9 @@
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel="stylesheet" href="assets/css/button.css" />
-<noscript>
-	<link rel="stylesheet" href="assets/css/noscript.css" />
-</noscript>
+<link rel="stylesheet" href="assets/css/noscript.css" />
+<link rel="stylesheet" href="assets/css/script.js" />
+	
 </head>
 <body class="is-preload">
 	<!-- Wrapper -->
@@ -25,12 +21,18 @@
 			<div class="inner">
 			
 			<!-- 검색창 -->
-				<form action="" class="search-bar">
-					<input type="search" name="search" pattern=".*\S.*" required>
-					<button class="search-btn" type="submit">
-						<span>Search</span>
-					</button>
-				</form>
+				 <div class="container">
+        <form autocomplete="off">
+          <div class="finder">
+            <div class="finder__outer">
+              <div class="finder__inner">
+                <div class="finder__icon" ref="icon"></div>
+                <input class="finder__input" type="text" name="q" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
 			
 				<!-- Logo -->
 				<a href="index.html" class="logo"> <span class="symbol"><img
