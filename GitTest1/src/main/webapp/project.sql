@@ -11,6 +11,7 @@ DROP TABLE reply CASCADE CONSTRAINTS;
 DROP TABLE push CASCADE CONSTRAINTS;
 DROP TABLE tanin CASCADE CONSTRAINTS;
 DROP TABLE acid CASCADE CONSTRAINTS;
+DROP TABLE wine2 CASCADE CONSTRAINTS;
 
 --사용자
 -- 남자 : 0, 여자 : 1
@@ -83,6 +84,23 @@ CREATE TABLE wine
  CONSTRAINT wine_body_fk FOREIGN KEY(body_id) REFERENCES body(body_id),
  CONSTRAINT wine_tanin_fk FOREIGN KEY(tanin_id) REFERENCES tanin(tanin_id));
  
+ --와인
+ --정보제공용
+CREATE TABLE wine2
+(wine_id1 NUMBER(10),
+ wine_name1 VARCHAR2(300) NOT NULL,
+ kind1 VARCHAR2(300) NOT NULL,
+ country1 VARCHAR2(300) NOT NULL,
+ cultivar1 VARCHAR2(300) NOT NULL,
+ sweet1 VARCHAR2(300) NOT NULL,
+ acid1 VARCHAR2(300) NOT NULL,
+ body1 VARCHAR2(300) NOT NULL,
+ tanin1 VARCHAR2(300) NOT NULL,
+ proof1 VARCHAR2(300) NOT NULL,
+ price1 VARCHAR2(300) NOT NULL,
+ img1 VARCHAR2(999) NOT NULL,
+ CONSTRAINT wine1_id_pk PRIMARY KEY(wine_id1));
+ 
 --와인 댓글(평가 포함)
 CREATE TABLE reply
 (reply_id NUMBER(10),
@@ -106,6 +124,5 @@ CREATE TABLE push
  CONSTRAINT push_cock_fk FOREIGN KEY(wine_id) REFERENCES wine(wine_id));
  
  
- select * from ACID;
- select * from BODY;
- 
+SELELCT * FROM wine;
+SELELCT * FROM wine2;
