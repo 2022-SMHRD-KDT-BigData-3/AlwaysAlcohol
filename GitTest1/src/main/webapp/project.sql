@@ -43,7 +43,10 @@ CREATE TABLE sweet
 (sweet_id NUMBER(10),
  sweet_name VARCHAR2(50) NOT NULL,
  CONSTRAINT sweet_id_pk PRIMARY KEY(sweet_id));
- 
+
+  
+select *from body;
+select *from SWEET;
 --국가
 CREATE TABLE country
 (country_id NUMBER(10),
