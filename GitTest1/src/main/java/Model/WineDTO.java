@@ -15,6 +15,7 @@ public class WineDTO {
 	public String price;
 	public String img;
 	
+	
 	public WineDTO(int windId, String wineName, String kind, String country, String cultivar, String sweet, String acid,
 			String body, String tanin, String proof, String price, String img) {
 		super();
