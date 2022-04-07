@@ -32,6 +32,18 @@ public class WineDTO {
 		this.price = price;
 		this.img = img;
 	}
+	
+	public WineDTO(int windId, String wineName, String country, String sweet, String proof, String price, String img) {
+		super();
+		this.windId = windId;
+		this.wineName = wineName;
+		this.country = country;
+		this.sweet = sweet;
+		this.proof = proof;
+		this.price = price;
+		this.img = img;
+	}
+
 	public int getWindId() {
 		return windId;
 	}
