@@ -2828,6 +2828,19 @@ input, select, textarea {
       padding: 8em 0 0.1em 0 ;
    }
 
+
+     #header div .logo{
+    position: relative;
+    color: #585858;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 59px;
+    font-weight: 900;
+    line-height: 1.75;
+    top: -34px;
+    right: 134px;
+     }
+
+
       #header .logo {
          display: block;
          border-bottom: 0;
