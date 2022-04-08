@@ -25,6 +25,7 @@
 		WineDAO dao = new WineDAO();
 		WineDTO dto = dao.selectWine(result);
 		
+		System.out.println(result+3);
 	%>
 	
 		<!-- Wrapper -->
@@ -62,7 +63,7 @@
 								<section>
 									<form action="#">
 									<div>
-									<span class="image fit"><img style="width: 38%; height: 604px; float:left; margin: 0% 5% 0% 5%;" src="images/wine.jpg"alt="" /></span>
+									<span class="image fit"><img style="width: 38%; height: 604px; float:left; margin: 0% 5% 0% 5%;" src="./images/WineImg/WineImg<%= result %>.jpg"alt="" /></span>
 									</div>
 									
 									<div class="table-wrapper">
@@ -70,7 +71,7 @@
 											<thead>
 												<tr>
 													<th>이름</th>
-												<td><%= dto.getWineName() %></td>
+													<td><%= dto.getWineName() %></td>
 												</tr>
 											</thead>
 											<tbody>
