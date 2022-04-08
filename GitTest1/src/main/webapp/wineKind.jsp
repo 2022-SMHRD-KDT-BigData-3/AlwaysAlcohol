@@ -167,6 +167,7 @@
                     당도 : <%= wineList.get(i).getSweet() %><br>
                     가격 : <%= wineList.get(i).getPrice() %>
                   </p>
+                  <!--  -->
                   <div class="options">
                     <h9>
                       <%= wineList.get(i).getProof() %>
