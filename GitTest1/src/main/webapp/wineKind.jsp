@@ -154,7 +154,7 @@
               <div>
                 <div class="img-box">
                 	<% %>
-                  <img src="<%= wineList.get(i).getImg()%>" alt=""/>
+                  <img src="./images/WineImg/WineImg<%= wineList.get(i).getWindId() %>.jpg" alt=""/>
                   <% System.out.println(wineList.get(i).getImg()); %>
                 </div>
                 <div class="detail-box">
