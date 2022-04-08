@@ -2875,7 +2875,7 @@ input, select, textarea {
          z-index: 10000;
       }
 
-         #header nav ul {
+/*          #header nav ul {
             display: -moz-flex;
             display: -webkit-flex;
             display: -ms-flex;
@@ -2888,7 +2888,7 @@ input, select, textarea {
             margin: 0;
             padding: 0;
          }
-
+ */
             #header nav ul li {
                display: block;
                padding: 0;

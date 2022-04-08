@@ -1,71 +1,68 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 <head>
 <title>Wine Plan</title>
 <meta charset="utf-8" />
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no" />
+   content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <noscript>
-	<link rel="stylesheet" href="assets/css/noscript.css" />
+   <link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
 
 
 </head>
 <body class="is-preload">
-	<!-- Wrapper -->
-	<div id="wrapper">
+   <!-- Wrapper -->
+   <div id="wrapper">
 
-		<!-- Header -->
-		<header id="header">
-			<div class="inner">
+      <!-- Header -->
+      <header id="header">
+         <div class="inner">
 
-				<!-- Logo -->
-				<a href="index.html" class="logo"> <span class="symbol"><img
-						src="images/logo.png" alt="" /></span><span class="title">Wine
-						Plan</span>
-				</a>
+            <!-- Logo -->
+            <a href="index.html" class="logo"> <span class="symbol"><img
+                  src="images/logo.png" alt="" /></span><span class="title">Wine
+                  Plan</span>
+            </a>
 
-				<!-- Nav -->
-				<nav>
-					<!-- 검색창 보류 -->
+            <!-- Nav -->
+            <nav>
+               <!-- 검색창 보류 -->
 
-				</nav>
-			</div>
-		</header>
-
-
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-				<section>
-					<h1>와인추천</h1>
-					<div class="box alt">
-						<div class="row gtr-uniform">
-							<div class="col-12">
-								<span class="image fit"><img src="images/pic13.jpg"
-									alt="" /></span>
-							</div>
-						</div>
-				</section>
+            </nav>
+         </div>
+      </header>
 
 
-				<!-- Table -->
+      <!-- Main -->
+      <div id="main">
+         <div class="inner">
+            <section>
+               <h1>와인추천</h1>
+               <div class="box alt">
+                  <div class="row gtr-uniform">
+                     <div class="col-12">
+                        <span class="image fit"><img src="images/pic13.jpg"
+                           alt="" /></span>
+                     </div>
+                  </div>
+            </section>
 
-				<br>
-				<h2>조건</h2>
-				<div class="table-wrapper" style="text-align: center;">
-					<table>
 
-						<tr>
+            <!-- Table -->
 
-							<th>당도</th>
+            <br>
+            <h2>조건</h2>
+            <div class="table-wrapper" style="text-align: center;">
+               <table>
 
+                  <tr>
+
+                     <th>당도</th>
+
+<<<<<<< HEAD
 							<td colspan="5">
 								<form action="http://localhost:9000/wine">
 									<div class="col-4 col-12-big">
@@ -82,7 +79,26 @@
 									</div>
 							</td>
 						</tr>
+=======
+                     <td colspan="5">
+                        <form action="http://localhost:9000/wine">
+                           <div class="col-4 col-12-big">
+                              <input type="radio" id="sweet-low" name="sweet_id" value=1>
+                              <label for="sweet-low"> 낮은 당도</label> <input type="radio"
+                                 id="sweet-alittlelow" name="sweet_id" value=2> <label
+                                 for="sweet-alittlelow">조금 낮은 당도</label> <input type="radio"
+                                 id="sweet-normal" name="sweet_id" value=3> <label
+                                 for="sweet-normal">중간 당도</label> <input type="radio"
+                                 id="sweet-alittlehigh" name="sweet_id" value=4> <label
+                                 for="sweet-alittlehigh">조금 높은 당도</label> <input type="radio"
+                                 id="sweet-high" name="sweet_id" value=5> <label
+                                 for="sweet-high">높은 당도</label>
+                           </div>
+                     </td>
+                  </tr>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/AlwaysAlcohol.git
 
+<<<<<<< HEAD
 						<tr>
 							<th>바디감</th>
 
@@ -101,9 +117,46 @@
 									<label for="demo-priority-high">무거운 바디</label>
 							</td>
 						</tr>
+=======
+                  <tr>
+                     <th>바디감</th>
 
-						</tr>
 
+                     <td colspan="5">
+                        <div class="col-4 col-12-small">
+                           <input type="radio" id="demo-priority-low" name="body_id"
+                              value=1> <label for="demo-priority-low">가벼운 바디</label>
+                           <input type="radio" id="demo-priority-alittlelow"
+                              name="body_id" value=2> <label
+                              for="demo-priority-alittlelow">조금 가벼운 바디</label> <input
+                              type="radio" id="demo-priority-normal" name="body_id" value=3>
+                           <label for="demo-priority-normal">중간 바디</label> <input
+                              type="radio" id="demo-priority-alittlehigh" name="body_id"
+                              value=4> <label for="demo-priority-alittlehigh">조금
+                              무거운 바디</label> <input type="radio" id="demo-priority-high"
+                              name="body_id" value=5> <label
+                              for="demo-priority-high">무거운 바디</label>
+                     </td>
+                  </tr>
+
+                  </tr>
+
+                  <tr class="price">
+                     <th>가격</th>
+                     <td colspan="5"><input name="price"
+                        placeholder="원하는 가격대를 입력해주세요"
+                        style="margin: 2px; width: 90%; height: 41px; position: relative; bottom: 17px;"></td>
+                  </tr>
+               </table>
+
+               <button type="reset">reset</button>
+               <button type="submit">submit</button>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/AlwaysAlcohol.git
+
+               <br>
+               </form>
+
+<<<<<<< HEAD
 						<tr class="price">
 							<th>가격</th>
 							<td colspan="5"><input name="price"
@@ -215,12 +268,81 @@
 									</div>
 								</footer>
 						</div>
+=======
+               <br> <br> <br>
 
+
+
+               <!-- Footer -->
+               <footer id="footer">
+                  <div class="inner" style="margin:0px 0px 0px 86px;">
+                  
+           
+                     <section>
+                        <h2>Get in touch</h2>
+                        <form method="post" action="#">
+                           <div class="fields">
+                              <div class="field half">
+                                 <input type="text" name="name" id="name" placeholder="Name" />
+                              </div>
+                              <div class="field half">
+                                 <input type="email" name="email" id="email"
+                                    placeholder="Email" />
+                              </div>
+                              <div class="field">
+                                 <textarea name="message" id="message" placeholder="Message"></textarea>
+                              </div>
+                           </div>
+                           <ul class="actions">
+                              <li><input type="submit" value="Send" class="primary" /></li>
+                           </ul>
+                        </form>
+                     </section>
+                     <section>
+                        <h2>Follow</h2>
+                        <ul class="icons">
+                           <li><a href="#" class="icon brands style2 fa-twitter"><span
+                                 class="label">Twitter</span></a></li>
+                           <li><a href="#" class="icon brands style2 fa-facebook-f"><span
+                                 class="label">Facebook</span></a></li>
+                           <li><a href="#" class="icon brands style2 fa-instagram"><span
+                                 class="label">Instagram</span></a></li>
+                           <li><a href="#" class="icon brands style2 fa-dribbble"><span
+                                 class="label">Dribbble</span></a></li>
+                           <li><a href="#" class="icon brands style2 fa-github"><span
+                                 class="label">GitHub</span></a></li>
+                           <li><a href="#" class="icon brands style2 fa-500px"><span
+                                 class="label">500px</span></a></li>
+                           <li><a href="#" class="icon solid style2 fa-phone"><span
+                                 class="label">Phone</span></a></li>
+                           <li><a href="#" class="icon solid style2 fa-envelope"><span
+                                 class="label">Email</span></a></li>
+                        </ul>
+                     </section>
+                     <ul class="copyright">
+                        <li>&copy; Untitled. All rights reserved</li>
+                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                     </ul>
+                  </div>
+               </footer>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/AlwaysAlcohol.git
+
+<<<<<<< HEAD
 						<!-- Scripts -->
 						<script src="assets/js/jquery.min.js"></script>
 						<script src="assets/js/browser.min.js"></script>
 						<script src="assets/js/breakpoints.min.js"></script>
 						<script src="assets/js/util.js"></script>
 						<script src="assets/js/main.js"></script>
+=======
+            </div>
+
+            <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/AlwaysAlcohol.git
 </body>
 </html>

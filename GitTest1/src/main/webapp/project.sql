@@ -65,6 +65,7 @@ CREATE TABLE tanin
  tanin_name VARCHAR(50) NOT NULL,
  CONSTRAINT tanin_id_pk PRIMARY KEY(tanin_id));
  select kind_name from kind;
+ 
 --와인
 CREATE TABLE wine
 (wine_id NUMBER(10),
@@ -127,5 +128,5 @@ CREATE TABLE push
  CONSTRAINT push_cock_fk FOREIGN KEY(wine_id) REFERENCES wine(wine_id));
  
  
-SELELCT * FROM wine;
-SELELCT * FROM wine2;
+SELECT * FROM wine;
+SELECT * FROM wine2;
