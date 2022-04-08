@@ -1,5 +1,7 @@
-<%@page import="Model.WineDAO"%>
 <%@page import="Model.WineDTO"%>
+<%@page import="Model.WineDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
@@ -15,6 +17,16 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+	
+	<%
+		String res = request.getParameter("result");
+		int result = Integer.parseInt(res);
+		
+		WineDAO dao = new WineDAO();
+		WineDTO dto = dao.selectWine(result);
+		
+	%>
+	
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -40,62 +52,61 @@
 					<div id="main">
 						<div class="inner">
 				<section>
-					<h1>와인추천</h1>
+					<h1>와인정보</h1>
 					<div class="box alt">
-						<div class="row gtr-uniform">
-							<div class="col-12">
-								<span class="image fit"><img src="images/pic13.jpg"
-									alt="" /></span>
-							</div>
-						</div>
+						
 				</section>
 
 			
 							<!-- Table -->
 								<section>
 									<form action="#">
+									<div>
+									<span class="image fit"><img style="width: 38%; height: 604px; float:left; margin: 0% 5% 0% 5%;" src="images/wine.jpg"alt="" /></span>
+									</div>
+									
 									<div class="table-wrapper">
-										<table>
+										<table style="width: 90%; text-align: center; margin-inline: auto;">
 											<thead>
 												<tr>
 													<th>이름</th>
-												<td>G7 까베르네 소비뇽 2016</td>
+												<td><%= dto.getWineName() %></td>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
 													<th>종류</th>
-													<td>레드 와인</td>
+													<td><%= dto.getKind() %></td>
 												</tr>
 												<tr>
 													<th>생산국</th>
-													<td>칠레</td>
+													<td><%= dto.getCountry() %></td>
 												</tr>
 												<tr>
 													<th>품종</th>
-													<td>Cabernet Sauvignon 100%</td>
+													<td><%= dto.getCultivar() %></td>
 												</tr>
 												<tr>
 													<th>당도</th>
-													<td>낮음</td>
+													<td><%= dto.getSweet() %></td>
 												</tr><tr>
 													<th>산도</th>
-													<td>중간</td>
+													<td><%= dto.getAcid() %></td>
 												</tr>
 												<tr>
 													<th>바디</th>
-													<td>조금 가벼운 바디</td>
+													<td><%= dto.getBody() %></td>
 												</tr>
 												<tr>
 													<th>타닌</th>
-													<td>조금 적은 타닌</td>
+													<td><%= dto.getTanin() %></td>
 												</tr>
 												<tr>
 													<th>도수</th>
-													<td>15 %alc</td>
+													<td><%= dto.getProof() %></td>
 												</tr><tr>
 													<th>가격</th>
-													<td>9,500원</td>
+													<td><%= dto.getPrice() %></td>
 												</tr>
 											</tbody>
 										</table>
