@@ -25,6 +25,7 @@
 		WineDAO dao = new WineDAO();
 		WineDTO dto = dao.selectWine(result);
 		
+		System.out.println(result+3);
 	%>
 	
 		<!-- Wrapper -->
@@ -70,7 +71,7 @@
 											<thead>
 												<tr>
 													<th>이름</th>
-												<td><%= dto.getWineName() %></td>
+													<td><%= dto.getWineName() %></td>
 												</tr>
 											</thead>
 											<tbody>

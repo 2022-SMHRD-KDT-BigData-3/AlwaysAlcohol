@@ -111,7 +111,7 @@ public class WineDAO {
 				psmt.setInt(1, wineId);
 				
 				rs = psmt.executeQuery();
-				
+				rs.next();
 				int wineID = rs.getInt(1);
 				String wineName = rs.getString(2);
 				String kind = rs.getString(3);
