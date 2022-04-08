@@ -93,6 +93,7 @@
 		padding: 0;
 		text-decoration: none;
 		width: 100%;
+		
 
 		&:invalid {
 			box-shadow: none;
@@ -144,7 +145,7 @@
 	input[type="checkbox"],
 	input[type="radio"], {
 		@include vendor('appearance', 'none');
-		display: block;
+		
 		float: left;
 		margin-right: -2em;
 		opacity: 0;
