@@ -1931,7 +1931,7 @@
                     // to allow the menu to "escape" the scroll parent's boundaries
                     // https://github.com/twbs/bootstrap/issues/24251
 
-                    if (this._config.boundary !== "scrollParent") {
+                    /*if (this._config.boundary !== "scrollParent") {
                         $(parent).addClass(ClassName$4.POSITION_STATIC);
                     }
 
@@ -1939,7 +1939,7 @@
                         referenceElement,
                         this._menu,
                         this._getPopperConfig()
-                    );
+                    );*/
                 } // If this is a touch-enabled device we add extra
                 // empty mouseover listeners to the body's immediate children;
                 // only needed because of broken event delegation on iOS

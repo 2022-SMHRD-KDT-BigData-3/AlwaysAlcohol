@@ -66,9 +66,9 @@
 						$wrapper
 							.css('height', $this.height());
 
-						$this
+						/*$this
 							.css('height', 'auto')
-							.css('height', $this.prop('scrollHeight') + 'px');
+							.css('height', $this.prop('scrollHeight') + 'px');*/
 
 					})
 					.on('keyup', function(event) {
