@@ -61,7 +61,7 @@
 			<div class="inner">
 
 				<!-- Logo -->
-				<a href="index.html" class="logo"> <span class="symbol"><img
+				<a href="index.jsp" class="logo"> <span class="symbol"><img
 						src="images/logo.png" alt="" /></span><span class="title">Wine
 						Plan</span>
 				</a>
@@ -80,7 +80,7 @@
 		<nav id="menu">
 			<h2>Menu</h2>
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.jsp">Home</a></li>
 				<li><a href="generic.html">Ipsum veroeros</a></li>
 				<li><a href="generic.html">Tempus etiam</a></li>
 				<li><a href="generic.html">Consequat dolor</a></li>
@@ -148,7 +148,12 @@
 	
       <div class="filters-content">
         <div class="row grid">
-        <% for(int i = 0 ; i <= 8 ; i++) {%>
+<%--         <% int pageNum = 1; %>
+         <% 
+        	
+        	pageNum = Integer.parseInt(request.getParameter("pageNumber")); 
+        	%> --%>
+        <% for(int i = 0 ; i < 12 ; i++) {%>
           <div class="col-sm-6 col-lg-4 all pizza">
             <div class="box">
               <div>
@@ -614,12 +619,28 @@
 		<!-- 페이지 이동  -->
 		<nav aria-label="Page navigation example">
 			<ul class="pagination">
+			<!-- 이전으로 -->
 				<li class="page-item"><a class="page-link" href="#"
 					aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
 				</a></li>
+				
+				<% %>
+				 
 				<li class="page-item"><a class="page-link" href="#">1</a></li>
 				<li class="page-item"><a class="page-link" href="#">2</a></li>
 				<li class="page-item"><a class="page-link" href="#">3</a></li>
+<<<<<<< HEAD
+				<li class="page-item"><a class="page-link" href="#">4</a></li>
+				<li class="page-item"><a class="page-link" href="#">5</a></li>
+				<li class="page-item"><a class="page-link" href="#">6</a></li>
+				<li class="page-item"><a class="page-link" href="#">7</a></li>
+				<li class="page-item"><a class="page-link" href="#">8</a></li>
+				<li class="page-item"><a class="page-link" href="#">9</a></li>
+				<li class="page-item"><a class="page-link" href="#">10</a></li>
+=======
+				
+				<!-- 이후로  -->
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/AlwaysAlcohol.git
 				<li class="page-item"><a class="page-link" href="#"
 					aria-label="Next"> <span aria-hidden="true">&raquo;</span>
 				</a></li>
