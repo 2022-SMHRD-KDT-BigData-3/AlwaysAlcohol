@@ -30,10 +30,10 @@ body {
   padding-bottom: 90px;
 }
 
-h1,
+/* h1,
 h2 {
   font-family: 'Dancing Script', cursive;
-}
+} */
 
 .heading_container {
   display: -webkit-box;
