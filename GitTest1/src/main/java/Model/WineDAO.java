@@ -1,11 +1,16 @@
 package Model;
 
+import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+
+
+
 
 public class WineDAO {
 
@@ -59,7 +64,7 @@ public class WineDAO {
 		}
 		
 		//종류별 와인 받아오기 메소드
-		public ArrayList<WineDTO> selectKind(String selectKind) {
+		public ArrayList<WineDTO> selectKind(String data) {
 			//ㅇㅇ와인을 눌렀을 때 kind 정보에 맞는 와인만 가져오기
 			String sql = "select wine_id, wine_name, country, sweet, price, proof, img from wine2 where kind = ?";
 			// 데이터를 담을 ArrayList
@@ -68,7 +73,7 @@ public class WineDAO {
 			db_conn();
 			try {
 				psmt = conn.prepareStatement(sql);
-				psmt.setString(1, selectKind);
+				psmt.setString(1, data);
 				//실행
 				rs = psmt.executeQuery();
 				//결과 꺼내서 ArrayList에 담기
@@ -129,4 +134,8 @@ public class WineDAO {
 				db_close();
 			} return dto;
 		}
+		
+		//이미지 url -> base 64
+		
+		
 }
