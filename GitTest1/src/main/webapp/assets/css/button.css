@@ -164,7 +164,7 @@ body {
 
 p {
 	margin: 20px 0px;
-	color: grey;
+	color: white;
 }
 
 /* ul의 클래스에 pagination-sm를 추가하면 작아지고, pagination-lg를 추가하면 커집니다. */
