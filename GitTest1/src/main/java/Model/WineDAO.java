@@ -135,7 +135,43 @@ public class WineDAO {
 			} return dto;
 		}
 		
-		//이미지 url -> base 64
+		//검색기능
+		public ArrayList<WineDTO> SerchWine(String search) {
+			// 검색받은 데이터 검색
+			String sql = "select wine_id, wine_name, country, sweet, price, proof, img from wine2 where wine_name = ?";
+			// 데이터를 담을 ArrayList
+			ArrayList<WineDTO> wineList = new ArrayList<WineDTO>();
+			db_conn();
+			try {
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1, search);
+				//실행
+				rs = psmt.executeQuery();
+				//결과 꺼내서 ArrayList에 담기
+				while(rs.next()) {
+					int wineID = rs.getInt(1);
+					String wineName = rs.getString(2);
+					String country = rs.getString(3);
+					String sweet = rs.getString(4);
+					String price = rs.getString(5);
+					String proof = rs.getString(6);
+					String img = rs.getString(7);
+					
+					WineDTO dto = new WineDTO(wineID, wineName, country, sweet, proof, price, img);
+					
+					wineList.add(dto);
+				}
+								
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				db_close();
+			}
+			
+		return wineList;
+		
+		
+		}
 		
 		
 }

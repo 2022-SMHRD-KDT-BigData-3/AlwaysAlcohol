@@ -92,38 +92,10 @@
 		<div id="main">
 			<div class="inner">
 				<header>
-					<% String data = request.getParameter("data");
-		  					String showWine="";
-		  					String showWineK="";
-		  					if(data.equals("레드와인")){
-		  						showWine = "Red Wine";
-		  						showWineK = "레드 와인";
-		  					}else if(data.equals("화이트와인")){
-		  						showWine = "White Wine";
-		  						showWineK = "화이트 와인";
-		  					}else if(data.equals("스파클링와인")){
-		  						showWine = "Sparkling Wine";
-		  						showWineK = "스파클링 와인";
-		  					}else if(data.equals("로제와인")){
-		  						showWine = "Rose Wine";
-		  						showWineK = "로제 와인";
-		  					}else if(data.equals("주정강화와인")){
-		  						showWine = "Fortified Wine";
-		  						showWineK = "주정강화 와인";
-		  					}else if(data.equals("고도주와인")){
-		  						showWine = "High Wine";
-		  						showWineK = "고도주 와인";
-		  					}else if(data.equals("기타와인")){
-		  						showWine = "Other Wine";
-		  						showWineK = "기타 와인";
-		  					}
-		  				WineDAO dao = new WineDAO();
-		  				ArrayList<WineDTO> wineList = dao.selectKind(data);
-		  			
-		  			%>
-					<h1><%= showWine %></h1>
+					
+					<h1>검색 결과</h1>
 					<br>
-					<p>세계의 모든 <%= showWineK %>, 바로 여기에</p>
+					<hr>
 				</header>
 				
 				<!-- <section class="tiles"> -->
@@ -153,6 +125,12 @@
         	
         	pageNum = Integer.parseInt(request.getParameter("pageNumber")); 
         	%> --%>
+        	<% String search = request.getParameter("search");
+		  					
+		  		WineDAO dao = new WineDAO();
+		  		ArrayList<WineDTO> wineList = dao.SerchWine(search);
+		  			
+		  			%>
         <% for(int i = 0 ; i < 12 ; i++) {%>
           <div class="col-sm-6 col-lg-4 all pizza">
             <div class="box">
@@ -160,7 +138,7 @@
                 <div class="img-box">
                 	<% %>
                   <img src="./images/WineImg/WineImg<%= wineList.get(i).getWindId() %>.jpg" alt=""/>
-                  <% System.out.println(wineList.get(i).getImg()); %>
+                  
                 </div>
                 <div class="detail-box">
                   <span>
@@ -175,7 +153,7 @@
                   
                   <div class="options">
                     <h9>
-                      <%= wineList.get(i).getProof() %>
+                     <%= wineList.get(i).getProof() %>
                     </h9>
                     <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">

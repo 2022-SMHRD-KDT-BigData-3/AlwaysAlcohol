@@ -185,7 +185,7 @@ body {
 
 				<!-- 검색창 -->
 				<div class="container">
-					<form action="" class="search-bar">
+					<form action="SearchWine.jsp" class="search-bar">
 						<input type="search" name="search" pattern=".*\S.*" required>
 						<button class="search-btn" type="submit">
 							<span>Search</span>
