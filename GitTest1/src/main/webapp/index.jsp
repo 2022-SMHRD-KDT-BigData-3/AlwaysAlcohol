@@ -89,7 +89,7 @@
                            <span class="image">
                               <img src="images/red.jpg" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=레드와인">
+                           <a href="wineKind.jsp?data=레드와인&pageNumber=1">
                               <h2>레드 와인</h2>
                               <!-- <div class="content">
                                  <p>레드 와인 설명글</p>
@@ -103,7 +103,7 @@
                               <img src="images/white.jpg" alt="" />
                            </span>
                            
-                           <a href="wineKind.jsp?data=화이트와인" >
+                           <a href="wineKind.jsp?data=화이트와인&pageNumber=1" >
                               <h2>화이트 와인</h2>
                               <!-- <div class="content">
                                  <p>화이트 와인 설명글</p>
@@ -115,7 +115,7 @@
                            <span class="image">
                               <img src="images/sparkling.jpg" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=스파클링와인">
+                           <a href="wineKind.jsp?data=스파클링와인&pageNumber=1">
                               <h2>스파클링 와인</h2>
                               <!-- <div class="content">
                                  <p>스파클링 와인 설명글</p>
@@ -126,7 +126,7 @@
                            <span class="image">
                               <img src="images/rose.jpg" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=로제와인">
+                           <a href="wineKind.jsp?data=로제와인&pageNumber=1">
                               <h2>로제 와인</h2>
                               <!-- <div class="content">
                                  <p>로제 와인 설명글</p>
@@ -137,7 +137,7 @@
                            <span class="image">
                               <img src="images/port.png" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=주정강화와인">
+                           <a href="wineKind.jsp?data=주정강화와인&pageNumber=1">
                               <h2>주정강화 와인</h2>
                               <!-- <div class="content">
                                  <p>주정강화 와인 설명글</p>
@@ -148,7 +148,7 @@
                            <span class="image">
                               <img src="images/highGradeWine.jpg" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=고도주와인">
+                           <a href="wineKind.jsp?data=고도주와인&pageNumber=1">
                               <h2>고도주 와인</h2>
                               <!-- <div class="content">
                                  <p>고도주  와인 설명글</p>
@@ -159,7 +159,7 @@
                            <span class="image">
                               <img src="images/etc.png" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=기타와인">
+                           <a href="wineKind.jsp?data=기타와인&pageNumber=1">
                               <h2>기타 와인</h2>
                               <!-- <div class="content">
                                  <p>기타 와인 설명글</p>
