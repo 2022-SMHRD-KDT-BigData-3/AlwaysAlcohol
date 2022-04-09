@@ -61,18 +61,18 @@
 			<div class="inner">
 
 				<!-- Logo -->
-				<a href="index.jsp" class="logo"> <span class="symbol"><img
-						src="images/logo.png" alt="" /></span><span class="title">Wine
-						Plan</span>
+				<a href="index.jsp" class="logo">
+				<span class="symbol"><imgsrc="images/logo.png" alt="" /></span>
+				<span class="title">Wine Plan</span>
 				</a>
 
-				<!-- Nav -->
+<!-- 				Nav
 				<nav>
 					<ul>
 						<li><a href="#menu">Menu</a></li>
 					</ul>
 				</nav>
-
+ -->
 			</div>
 		</header>
 
@@ -164,13 +164,13 @@
         <% for(int i = cnt ; i < cnt+12 ; i++) {%>
           <div class="col-sm-6 col-lg-4 all pizza">
             <div class="box">
-           <div>
+           <div style="height: 530px;">
                 <div class="img-box">
                 	<a href = "detail.jsp?wineId=<%=wineList.get(i).getWindId() %>">
                   <img src="./images/WineImg/WineImg<%= wineList.get(i).getWindId() %>.jpg" alt=""/>
                   </a>
                 </div>
-                <div class="detail-box">
+                <div class="detail-box"">
                   <span>
                  	<%= wineList.get(i).getWineName() %>
                   </span>
@@ -178,14 +178,14 @@
                     <br>
                     원산지 : <%= wineList.get(i).getCountry() %><br>
                     당도 : <%= wineList.get(i).getSweet() %><br>
-                    가격 : <%= wineList.get(i).getPrice() %>
+                    도수 : <%= wineList.get(i).getProof() %>
                   </p>
                   
                   <div class="options">
                     <h9>
-                      <%= wineList.get(i).getProof() %>
+                    <%= wineList.get(i).getPrice() %>
                     </h9>
-                    <a href="">
+                    <!-- <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                         <g>
                           <g>
@@ -208,7 +208,7 @@
                           </g>
                         </g>
                       </svg>
-                    </a>
+                    </a> -->
                   </div>
                 </div>
               </div>
