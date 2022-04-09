@@ -2748,7 +2748,7 @@ input, select, textarea {
          }
 
       * + .tiles {
-         margin-top: 2em;
+         margin: 600PX 0 600PX 0;
       }
 
       body.is-preload .tiles article {
@@ -2856,8 +2856,9 @@ input, select, textarea {
 
          #header .logo > * {
             display: inline-block;
-            vertical-align: middle;
-         }
+			vertical-align: middle;
+			color: #545454;
+}
 
          #header .logo .symbol {
             margin-right: 0.65em;
