@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 
 <html>
@@ -14,97 +14,109 @@
 <link rel="stylesheet" href="assets/css/script.js" />
 
 <style type="text/css">
-
-
 * {
 	border: 0;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
+
 :root {
-	font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1920 - 320));
+	font-size: calc(16px + ( 24 - 16)*(100vw- 320px)/(1920- 320));
 }
+
 body, button, input {
 	font: 1em Hind, sans-serif;
 	line-height: 1.5em;
 }
+
 body, input {
 	color: #171717;
 }
+
 body, .search-bar {
 	display: flex;
 }
+
 body {
 	background: #f1f1f1;
 	height: 100vh;
+	position: absolute;
+    left: 8%
 }
-.search-bar input,
-.search-btn, 
-.search-btn:before, 
-.search-btn:after {
+
+.search-bar input, .search-btn, .search-btn:before, .search-btn:after {
 	transition: all 0.25s ease-out;
 }
-.search-bar input,
-.search-btn {
+
+.search-bar input, .search-btn {
 	width: 3em;
 	height: 3em;
 }
-.search-bar input:invalid:not(:focus),
-.search-btn {
+
+.search-bar input:invalid:not(:focus), .search-btn {
 	cursor: pointer;
 }
-.search-bar,
-.search-bar input:focus,
-.search-bar input:valid  {
+
+.search-bar, .search-bar input:focus, .search-bar input:valid {
 	width: 50%;
 }
-.search-bar input:focus,
-.search-bar input:not(:focus) + .search-btn:focus {
+
+.search-bar input:focus, .search-bar input:not(:focus)+.search-btn:focus
+	{
 	outline: transparent;
 }
+
 .search-bar {
 	margin: auto;
 	padding: 1.5em;
-	justify-content: center;
+	justify-content: flex-end;
 	max-width: 30em;
+	position: absolute;
+    left: 52%;
+    bottom: 90%;
+    margin: 5px;
 }
+
 .search-bar input {
 	background: transparent;
 	border-radius: 1.5em;
 	box-shadow: 0 0 0 0.4em #171717 inset;
 	padding: 0.75em;
-	transform: translate(0.5em,0.5em) scale(0.5);
+	transform: translate(0.5em, 0.5em) scale(0.5);
 	transform-origin: 100% 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 }
+
 .search-bar input::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
-.search-bar input:focus,
-.search-bar input:valid {
+
+.search-bar input:focus, .search-bar input:valid {
 	background: #fff;
 	border-radius: 0.375em 0 0 0.375em;
 	box-shadow: 0 0 0 0.1em #d9d9d9 inset;
 	transform: scale(1);
 }
+
 .search-btn {
 	background: #171717;
-	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+	border-radius: 0 0.75em 0.75em 0/0 1.5em 1.5em 0;
 	padding: 0.75em;
 	position: relative;
-	transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
+	transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
 	transform-origin: 0 50%;
 }
-.search-btn:before, 
-.search-btn:after {
+
+.search-btn:before, .search-btn:after {
 	content: "";
 	display: block;
 	opacity: 0;
 	position: absolute;
 }
+
 .search-btn:before {
 	border-radius: 50%;
 	box-shadow: 0 0 0 0.2em #f1f1f1 inset;
@@ -113,6 +125,7 @@ body {
 	width: 1.2em;
 	height: 1.2em;
 }
+
 .search-btn:after {
 	background: #f1f1f1;
 	border-radius: 0 0.25em 0.25em 0;
@@ -120,9 +133,10 @@ body {
 	left: 51%;
 	width: 0.75em;
 	height: 0.25em;
-	transform: translate(0.2em,0) rotate(45deg);
+	transform: translate(0.2em, 0) rotate(45deg);
 	transform-origin: 0 50%;
 }
+
 .search-btn span {
 	display: inline-block;
 	overflow: hidden;
@@ -130,27 +144,27 @@ body {
 	height: 1px;
 }
 
-
 /* Active state */
-.search-bar input:focus + .search-btn,
-.search-bar input:valid + .search-btn {
+.search-bar input:focus+.search-btn, .search-bar input:valid+.search-btn
+	{
 	background: black;
 	border-radius: 0 0.375em 0.375em 0;
 	transform: scale(1);
 }
-.search-bar input:focus + .search-btn:before, 
-.search-bar input:focus + .search-btn:after,
-.search-bar input:valid + .search-btn:before, 
-.search-bar input:valid + .search-btn:after {
+
+.search-bar input:focus+.search-btn:before, .search-bar input:focus+.search-btn:after,
+	.search-bar input:valid+.search-btn:before, .search-bar input:valid+.search-btn:after
+	{
 	opacity: 1;
 }
-.search-bar input:focus + .search-btn:hover,
-.search-bar input:valid + .search-btn:hover,
-.search-bar input:valid:not(:focus) + .search-btn:focus {
+
+.search-bar input:focus+.search-btn:hover, .search-bar input:valid+.search-btn:hover,
+	.search-bar input:valid:not(:focus)+.search-btn:focus {
 	background: black;
 }
-.search-bar input:focus + .search-btn:active,
-.search-bar input:valid + .search-btn:active {
+
+.search-bar input:focus+.search-btn:active, .search-bar input:valid+.search-btn:active
+	{
 	transform: translateY(1px);
 }
 
@@ -164,8 +178,7 @@ body {
 	.search-bar input {
 		box-shadow: 0 0 0 0.4em #f1f1f1 inset;
 	}
-	.search-bar input:focus,
-	.search-bar input:valid {
+	.search-bar input:focus, .search-bar input:valid {
 		background: #3d3d3d;
 		box-shadow: 0 0 0 0.1em #3d3d3d inset;
 	}
@@ -175,13 +188,21 @@ body {
 }
 </style>
 </head>
-<body class="is-preload">
+<body class="is-preload" >
 	<!-- Wrapper -->
 	<div id="wrapper">
 
 		<!-- Header -->
 		<header id="header">
-			<div class="inner">
+			
+			<section style="position: absolute; top: 2%;left: 4%;">
+				<!-- Logo -->
+				<a href="index.html" class="logo"> <span class="symbol"><img
+						src="images/logo.png" alt="" /></span><span class="title">Wine
+						Plan</span>
+				</a>
+				</section>
+
 
 				<!-- 검색창 -->
 				<div class="container">
@@ -190,122 +211,100 @@ body {
 						<button class="search-btn" type="submit">
 							<span>Search</span>
 				</div>
-
-				<!-- Logo -->
-				<a href="index.html" class="logo"> <span class="symbol"><img
-						src="images/logo.png" alt="" /></span><span class="title">Wine
-						Plan</span>
-				</a>
-
+				
 				
 
-			</div>
-		</header>
 
 		
+		</header>
+
+
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
 				<!-- 주류 추천 페이지로 이동 -->
 				<header style="text-align: center;">
-					<button class="button1" id="move_wine">
-
+					
+					<div>
+					<h1 style="text-align: left; color: #585858;">
+						여러분의 취향에 맞는<br>여러종류의 와인을<br>추천받아 보세요!
+					</h1>
+					<h4
+						style="font-weight: 1000; font-size: 36px; line-height: 2; margin: 0 0 20px 0; letter-spacing: 0; position: absolute; color: #585858;">
+						당도, 바디감, 가격만 선택하시면 원하시는 와인을 추천해드립니다.</h4>
+					<button class="button1" id="move_wine"
+						style="position: absolute; left: 67px; top: 38em; border-radius: 23px;">
 						<h1>
-							<a href="elements.html">무슨 와인을 마실 지<br> 더이상 고민하지 마세요.
-							</a>
+							<a href="elements.html" style="color: white;">추천 받기 →</a>
 						</h1>
 					</button>
-
-					<br>
-					<br>
-					<p style="margin-bottom: 5px;">회원님의 취향과 선호도를 분석하여 저희가
-						추천해드리겠습니다.</p>
+					</div>
+										
 				</header>
 				</button>
-				
-<section class="tiles">
-                        <article class="style1">
-                           <span class="image">
-                              <img src="images/red.jpg" alt="" />
-                           </span>
-                           <a href="wineKind.jsp?data=레드와인&pageNumber=1">
-                              <h2>레드 와인</h2>
-                              <!-- <div class="content">
+
+				<section class="tiles">
+					<article class="style1">
+						<span class="image"> <img src="images/red.jpg" alt="" />
+						</span> <a href="wineKind.jsp?data=레드와인&pageNumber=1">
+							<h2>레드 와인</h2> <!-- <div class="content">
                                  <p>레드 와인 설명글</p>
                               </div> -->
-                           </a>
-                        </article>
-                        
-                        
-                        <article class="style2">
-                           <span class="image">
-                              <img src="images/white.jpg" alt="" />
-                           </span>
-                           
-                           <a href="wineKind.jsp?data=화이트와인&pageNumber=1" >
-                              <h2>화이트 와인</h2>
-                              <!-- <div class="content">
+						</a>
+					</article>
+
+
+					<article class="style2">
+						<span class="image"> <img src="images/white.jpg" alt="" />
+						</span> <a href="wineKind.jsp?data=화이트와인&pageNumber=1">
+							<h2>화이트 와인</h2> <!-- <div class="content">
                                  <p>화이트 와인 설명글</p>
                               </div> -->
-                           </a>
-                        </article>
-                        
-                        <article class="style3">
-                           <span class="image">
-                              <img src="images/sparkling.jpg" alt="" />
-                           </span>
-                           <a href="wineKind.jsp?data=스파클링와인&pageNumber=1">
-                              <h2>스파클링 와인</h2>
-                              <!-- <div class="content">
+						</a>
+					</article>
+
+					<article class="style3">
+						<span class="image"> <img src="images/sparkling.jpg" alt="" />
+						</span> <a href="wineKind.jsp?data=스파클링와인&pageNumber=1">
+							<h2>스파클링 와인</h2> <!-- <div class="content">
                                  <p>스파클링 와인 설명글</p>
                               </div> -->
-                           </a>
-                        </article>
-                        <article class="style4">
-                           <span class="image">
-                              <img src="images/rose.jpg" alt="" />
-                           </span>
-                           <a href="wineKind.jsp?data=로제와인&pageNumber=1">
-                              <h2>로제 와인</h2>
-                              <!-- <div class="content">
+						</a>
+					</article>
+					<article class="style4">
+						<span class="image"> <img src="images/rose.jpg" alt="" />
+						</span> <a href="wineKind.jsp?data=로제와인&pageNumber=1">
+							<h2>로제 와인</h2> <!-- <div class="content">
                                  <p>로제 와인 설명글</p>
                               </div> -->
-                           </a>
-                        </article>
-                        <article class="style5">
-                           <span class="image">
-                              <img src="images/port.png" alt="" />
-                           </span>
-                           <a href="wineKind.jsp?data=주정강화와인&pageNumber=1">
-                              <h2>주정강화 와인</h2>
-                              <!-- <div class="content">
+						</a>
+					</article>
+					<article class="style5">
+						<span class="image"> <img src="images/port.png" alt="" />
+						</span> <a href="wineKind.jsp?data=주정강화와인&pageNumber=1">
+							<h2>주정강화 와인</h2> <!-- <div class="content">
                                  <p>주정강화 와인 설명글</p>
                               </div> -->
-                           </a>
-                        </article>
-                        <article class="style6">
-                           <span class="image">
-                              <img src="images/highGradeWine.jpg" alt="" />
-                           </span>
-                           <a href="wineKind.jsp?data=고도주와인&pageNumber=1">
-                              <h2>고도주 와인</h2>
-                              <!-- <div class="content">
+						</a>
+					</article>
+					<article class="style6">
+						<span class="image"> <img src="images/highGradeWine.jpg"
+							alt="" />
+						</span> <a href="wineKind.jsp?data=고도주와인&pageNumber=1">
+							<h2>고도주 와인</h2> <!-- <div class="content">
                                  <p>고도주  와인 설명글</p>
                               </div> -->
-                           </a>
-                        </article>
-                        <article class="style2">
-                           <span class="image">
-                              <img src="images/etc.png" alt="" />
-                           </span>
-                           <a href="wineKind.jsp?data=기타와인&pageNumber=1">
-                              <h2>기타 와인</h2>
-                              <!-- <div class="content">
+						</a>
+					</article>
+					<article class="style2">
+						<span class="image"> <img src="images/etc.png" alt="" />
+						</span> <a href="wineKind.jsp?data=기타와인&pageNumber=1">
+							<h2>기타 와인</h2> <!-- <div class="content">
                                  <p>기타 와인 설명글</p>
                               </div> -->
-                           </a>
-                        </article>
-<!--                         <article class="style3">
+						</a>
+					</article>
+					<!--                         <article class="style3">
 =======
 
 

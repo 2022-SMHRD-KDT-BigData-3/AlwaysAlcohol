@@ -183,10 +183,10 @@ p {
 
 /* 추천페이지로 넘어가는 버튼 css  */
 #move_wine {
-  background-color: #ffff;
+  background-color: #585858;
   border: none;
   color: white;
-  margin: 5px;
+  /* margin: 5px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
