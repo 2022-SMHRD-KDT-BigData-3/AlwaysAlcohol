@@ -36,7 +36,7 @@
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="index.jsp" class="logo">
 									<span class="symbol"><img src="images/logo.png" alt="" /></span><span class="title">Wine Plan</span>
 								</a>
 
