@@ -2391,8 +2391,7 @@ input, select, textarea {
 
       table td {
          padding: 0.75em 0.75em;
-         position: relative;
-  	     top: 20px;
+         
       }
 
       table th {
@@ -3190,10 +3189,7 @@ input, select, textarea {
          -webkit-flex-wrap: wrap;
          -ms-flex-wrap: wrap;
          flex-wrap: wrap;
-         -moz-flex-direction: row;
-         -webkit-flex-direction: row;
-         -ms-flex-direction: row;
-         flex-direction: row;
+         
       }
 
          #footer > .inner > * > :last-child {
@@ -3258,7 +3254,7 @@ input, select, textarea {
       @media screen and (max-width: 980px) {
 
          #footer > .inner section:nth-child(1) {
-            width: 66%;
+            width: 50%;
             margin-right: 0;
          }
 
@@ -3329,7 +3325,7 @@ input, select, textarea {
       width: 100%;
       max-width: 68em;
       margin: 0 auto;
-      padding: 0 2.5em;
+      padding: 0 5px;
    }
 
       @media screen and (max-width: 736px) {

@@ -41,8 +41,6 @@ body, .search-bar {
 body {
 	background: #f1f1f1;
 	height: 100vh;
-	position: relative;
-	left: 25%
 }
 
 .search-bar input, .search-btn, .search-btn:before, .search-btn:after {
@@ -69,14 +67,11 @@ body {
 }
 
 .search-bar {
-	margin: auto;
-    padding: 1.5em;
-    justify-content: flex-end;
+	justify-content: flex-end;
     max-width: 30em;
     position: absolute;
     left: 48%;
-    bottom: 87%;
-    margin: 5px;
+    bottom: 82%;
 }
 
 .search-bar input {
@@ -310,7 +305,7 @@ body {
 
 		<!-- Footer -->
 		<footer id="footer">
-			<div class="inner">
+			<div class="inner" style="position: relative; top: 55px; left: 55px;">
 				<section>
 					<h2>Get in touch</h2>
 					<form method="post" action="#">
