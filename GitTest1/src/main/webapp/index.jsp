@@ -225,12 +225,12 @@ body {
 				</header>
 				</button>
 				
-<section class="tiles">
+						<section class="tiles">
                         <article class="style1">
                            <span class="image">
                               <img src="images/red.jpg" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=레드와인&pageNumber=1">
+                           <a href="wineKind.jsp?data=레드와인&cnt=0">
                               <h2>레드 와인</h2>
                               <!-- <div class="content">
                                  <p>레드 와인 설명글</p>
@@ -244,7 +244,7 @@ body {
                               <img src="images/white.jpg" alt="" />
                            </span>
                            
-                           <a href="wineKind.jsp?data=화이트와인&pageNumber=1" >
+                           <a href="wineKind.jsp?data=화이트와인&cnt=0" >
                               <h2>화이트 와인</h2>
                               <!-- <div class="content">
                                  <p>화이트 와인 설명글</p>
@@ -256,7 +256,7 @@ body {
                            <span class="image">
                               <img src="images/sparkling.jpg" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=스파클링와인&pageNumber=1">
+                           <a href="wineKind.jsp?data=스파클링와인&cnt=0">
                               <h2>스파클링 와인</h2>
                               <!-- <div class="content">
                                  <p>스파클링 와인 설명글</p>
@@ -267,7 +267,7 @@ body {
                            <span class="image">
                               <img src="images/rose.jpg" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=로제와인&pageNumber=1">
+                           <a href="wineKind.jsp?data=로제와인&cnt=0">
                               <h2>로제 와인</h2>
                               <!-- <div class="content">
                                  <p>로제 와인 설명글</p>
@@ -278,7 +278,7 @@ body {
                            <span class="image">
                               <img src="images/port.png" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=주정강화와인&pageNumber=1">
+                           <a href="wineKind.jsp?data=주정강화와인&cnt=0">
                               <h2>주정강화 와인</h2>
                               <!-- <div class="content">
                                  <p>주정강화 와인 설명글</p>
@@ -289,7 +289,7 @@ body {
                            <span class="image">
                               <img src="images/highGradeWine.jpg" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=고도주와인&pageNumber=1">
+                           <a href="wineKind.jsp?data=고도주와인&cnt=0">
                               <h2>고도주 와인</h2>
                               <!-- <div class="content">
                                  <p>고도주  와인 설명글</p>
@@ -300,137 +300,12 @@ body {
                            <span class="image">
                               <img src="images/etc.png" alt="" />
                            </span>
-                           <a href="wineKind.jsp?data=기타와인&pageNumber=1">
+                           <a href="wineKind.jsp?data=기타와인&cnt=0">
                               <h2>기타 와인</h2>
-                              <!-- <div class="content">
-                                 <p>기타 와인 설명글</p>
-                              </div> -->
+                      
                            </a>
                         </article>
-<!--                         <article class="style3">
-=======
 
-
-				<section class="tiles">
-					<article class="style1">
-						<span class="image"> <img src="images/red.jpg" alt="" />
-						</span> <a href="redWine.html">
-							<h2>레드 와인</h2>
-							<div class="content">
-								<p>레드 와인 설명글</p>
-							</div>
-						</a>
-					</article>
-					<article class="style2">
-						<span class="image"> <img src="images/white.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>화이트 와인</h2>
-							<div class="content">
-								<p>화이트 와인 설명글</p>
-							</div>
-						</a>
-					</article>
-					<article class="style3">
-						<span class="image"> <img src="images/sparkling.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>스파클링 와인</h2>
-							<div class="content">
-								<p>스파클링 와인 설명글</p>
-							</div>
-						</a>
-					</article>
-					<article class="style4">
-						<span class="image"> <img src="images/rose.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>로제 와인</h2>
-							<div class="content">
-								<p>로제 와인 설명글</p>
-							</div>
-						</a>
-					</article>
-					<article class="style5">
-						<span class="image"> <img src="images/pic05.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>주정강화 와인</h2>
-							<div class="content">
-								<p>주정강화 와인 설명글</p>
-							</div>
-						</a>
-					</article>
-					<article class="style6">
-						<span class="image"> <img src="images/pic06.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>고도주 와인</h2>
-							<div class="content">
-								<p>고도주 와인 설명글</p>
-							</div>
-						</a>
-					</article>
-					<article class="style2">
-						<span class="image"> <img src="images/pic07.jpg" alt="" />
-						</span> <a href="generic.html">
-							<h2>기타 와인</h2>
-							<div class="content">
-								<p>기타 와인 설명글</p>
-							</div>
-						</a>
-					</article>
-					<!--                         <article class="style3">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/AlwaysAlcohol
-                           <span class="image">
-                              <img src="images/pic08.jpg" alt="" />
-                           </span>
-                           <a href="generic.html">
-                              <h2>Dolor</h2>
-                              <div class="content">
-                                 <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                              </div>
-                           </a>
-                        </article>
-                        <article class="style1">
-                           <span class="image">
-                              <img src="images/pic09.jpg" alt="" />
-                           </span>
-                           <a href="generic.html">
-                              <h2>Nullam</h2>
-                              <div class="content">
-                                 <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                              </div>
-                           </a>
-                        </article>
-                        <article class="style5">
-                           <span class="image">
-                              <img src="images/pic10.jpg" alt="" />
-                           </span>
-                           <a href="generic.html">
-                              <h2>Ultricies</h2>
-                              <div class="content">
-                                 <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                              </div>
-                           </a>
-                        </article>
-                        <article class="style6">
-                           <span class="image">
-                              <img src="images/pic11.jpg" alt="" />
-                           </span>
-                           <a href="generic.html">
-                              <h2>Dictum</h2>
-                              <div class="content">
-                                 <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                              </div>
-                           </a>
-                        </article>
-                        <article class="style4">
-                           <span class="image">
-                              <img src="images/pic12.jpg" alt="" />
-                           </span>
-                           <a href="generic.html">
-                              <h2>Pretium</h2>
-                              <div class="content">
-                                 <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                              </div>
-                           </a>
-                        </article> -->
 				</section>
 			</div>
 		</div>
