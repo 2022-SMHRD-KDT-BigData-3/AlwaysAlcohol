@@ -2748,7 +2748,7 @@ input, select, textarea {
          }
 
       * + .tiles {
-         margin: 600PX 0 600PX 0;
+         margin: 10% 0 10% 0;
       }
 
       body.is-preload .tiles article {
