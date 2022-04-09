@@ -49,6 +49,7 @@ body {
 	transition: all 0.25s ease-out;
 }
 
+
 .search-bar input, .search-btn {
 	width: 3em;
 	height: 3em;
@@ -76,8 +77,6 @@ body {
     left: 48%;
     bottom: 87%;
     margin: 5px;
-}
-}
 }
 
 .search-bar input {
@@ -200,7 +199,7 @@ body {
 
 			<section style="position: absolute; top: 2%; left: 4%;">
 				<!-- Logo -->
-				<a href="index.html" class="logo"> <span class="symbol"><img
+				<a href="index.jsp" class="logo"> <span class="symbol"><img
 						src="images/logo.png" alt="" /></span><span class="title">Wine
 						Plan</span>
 				</a>

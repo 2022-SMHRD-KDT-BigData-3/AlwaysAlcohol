@@ -67,17 +67,17 @@
 				</a>
 
 				<!-- Nav -->
-				<nav>
+		<!-- 		<nav>
 					<ul>
 						<li><a href="#menu">Menu</a></li>
 					</ul>
 				</nav>
 
 			</div>
-		</header>
+		</header> -->
 
 		<!-- Menu -->
-		<nav id="menu">
+		<!-- <nav id="menu">
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="index.jsp">Home</a></li>
@@ -86,7 +86,7 @@
 				<li><a href="generic.html">Consequat dolor</a></li>
 				<li><a href="signin.html">Login</a></li>
 			</ul>
-		</nav>
+		</nav> -->
 
 		<!-- Main -->
 		<div id="main">
@@ -595,7 +595,7 @@
 		</div>
 
 		<!-- 페이지 이동  -->
-		<nav aria-label="Page navigation example">
+		<%-- nav aria-label="Page navigation example">
 			<ul class="pagination">
 			<!-- 이전으로 -->
 				<li class="page-item"><a class="page-link" href="#"
@@ -619,7 +619,7 @@
 					aria-label="Next"> <span aria-hidden="true">&raquo;</span>
 				</a></li>
 			</ul>
-		</nav>
+		</nav> --%>
 
 		<!-- Footer -->
 		<footer id="footer">

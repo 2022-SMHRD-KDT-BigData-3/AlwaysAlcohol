@@ -2733,6 +2733,7 @@ input, select, textarea {
             transform: scale(1.1);
          }
 
+
             body:not(.is-touch) .tiles article:hover > .image:before {
                background-color: #9d9d9d; /* 마우스 올렸을 때 색깔 */
                opacity: 0.35;
