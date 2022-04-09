@@ -56,44 +56,22 @@
 	<div id="wrapper">
 
 		<!-- Header -->
-
 		<header id="header">
-			<div class="inner">
 
+			<section style="position: absolute; top: 2%; left: 4%;">
 				<!-- Logo -->
 				<a href="index.jsp" class="logo"> <span class="symbol"><img
 						src="images/logo.png" alt="" /></span><span class="title">Wine
 						Plan</span>
 				</a>
-
-				<!-- Nav -->
-		<!-- 		<nav>
-					<ul>
-						<li><a href="#menu">Menu</a></li>
-					</ul>
-				</nav>
-
-			</div>
-		</header> -->
-
-		<!-- Menu -->
-		<!-- <nav id="menu">
-			<h2>Menu</h2>
-			<ul>
-				<li><a href="index.jsp">Home</a></li>
-				<li><a href="generic.html">Ipsum veroeros</a></li>
-				<li><a href="generic.html">Tempus etiam</a></li>
-				<li><a href="generic.html">Consequat dolor</a></li>
-				<li><a href="signin.html">Login</a></li>
-			</ul>
-		</nav> -->
-
+			</section>
+			</header>
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
 				<header>
 					
-					<h1>검색 결과</h1>
+					<h1 style="position: relative;left: 3%;">검색 결과</h1>
 					<br>
 					<hr>
 				</header>
@@ -101,23 +79,6 @@
 				<!-- <section class="tiles"> -->
 					  <section class="food_section layout_padding-bottom">
     <div class="container">
-    
-<!-- 상단 네임 -->    
-<!--       <div class="heading_container heading_center">
-        <h2>
-          Our Menu
-        </h2>
-      </div> -->
-
-<!-- 메뉴바 -->
-<!--       <ul class="filters_menu">
-        <li class="active" data-filter="*">All</li>
-        <li data-filter=".burger">Burger</li>
-        <li data-filter=".pizza">Pizza</li>
-        <li data-filter=".pasta">Pasta</li>
-        <li data-filter=".fries">Fries</li>
-      </ul> -->
-	
       <div class="filters-content">
         <div class="row grid">
 <%--         <% int pageNum = 1; %>
@@ -623,7 +584,7 @@
 
 		<!-- Footer -->
 		<footer id="footer">
-			<div class="inner">
+			<div class="inner" style="margin: 0 0px 0px 40px;padding: 0 90px;">
 				<section>
 					<h2>Get in touch</h2>
 					<form method="post" action="#">
