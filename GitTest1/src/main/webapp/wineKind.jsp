@@ -153,6 +153,7 @@
         	
         	pageNum = Integer.parseInt(request.getParameter("pageNumber")); 
         	%> --%>
+
   
 	
 		<% 
@@ -163,11 +164,11 @@
         <% for(int i = cnt ; i < cnt+12 ; i++) {%>
           <div class="col-sm-6 col-lg-4 all pizza">
             <div class="box">
-              <div>
+           <div>
                 <div class="img-box">
-                	<% %>
+                	<a href = "detail.jsp?wineId=<%=wineList.get(i).getWindId() %>">
                   <img src="./images/WineImg/WineImg<%= wineList.get(i).getWindId() %>.jpg" alt=""/>
-                  <% System.out.println(wineList.get(i).getImg()); %>
+                  </a>
                 </div>
                 <div class="detail-box">
                   <span>
@@ -213,6 +214,7 @@
               </div>
             </div>
           </div>
+          
           <% } %>
      <!--      <div class="col-sm-6 col-lg-4 all">
             <div class="box">
