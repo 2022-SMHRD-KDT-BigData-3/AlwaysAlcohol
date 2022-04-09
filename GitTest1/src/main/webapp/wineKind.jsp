@@ -153,7 +153,14 @@
         	
         	pageNum = Integer.parseInt(request.getParameter("pageNumber")); 
         	%> --%>
-        <% for(int i = 0 ; i < 12 ; i++) {%>
+  
+	
+		<% 
+		String res = request.getParameter("cnt");
+		int cnt = Integer.parseInt(res);
+		%>
+        	
+        <% for(int i = cnt ; i < cnt+12 ; i++) {%>
           <div class="col-sm-6 col-lg-4 all pizza">
             <div class="box">
               <div>
@@ -624,18 +631,17 @@
 					aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
 				</a></li>
 				
-				<% %>
-				 
-				<li class="page-item"><a class="page-link" href="#">1</a></li>
-				<li class="page-item"><a class="page-link" href="#">2</a></li>
-				<li class="page-item"><a class="page-link" href="#">3</a></li>
-				<li class="page-item"><a class="page-link" href="#">4</a></li>
-				<li class="page-item"><a class="page-link" href="#">5</a></li>
-				<li class="page-item"><a class="page-link" href="#">6</a></li>
-				<li class="page-item"><a class="page-link" href="#">7</a></li>
-				<li class="page-item"><a class="page-link" href="#">8</a></li>
-				<li class="page-item"><a class="page-link" href="#">9</a></li>
-				<li class="page-item"><a class="page-link" href="#">10</a></li>
+
+				<li class="page-item"><a class="page-link" href="wineKind.jsp?data=<%=data%>&cnt=0"">1</a></li>
+				<li class="page-item"><a class="page-link" href="wineKind.jsp?data=<%=data%>&cnt=12">2</a></li>
+				<li class="page-item"><a class="page-link" href="wineKind.jsp?data=<%=data%>&cnt=24">3</a></li>
+				<li class="page-item"><a class="page-link" href="wineKind.jsp?data=<%=data%>&cnt=36">4</a></li>
+				<li class="page-item"><a class="page-link" href="wineKind.jsp?data=<%=data%>&cnt=48">5</a></li>
+				<li class="page-item"><a class="page-link" href="wineKind.jsp?data=<%=data%>&cnt=60">6</a></li>
+				<li class="page-item"><a class="page-link" href="wineKind.jsp?data=<%=data%>&cnt=72">7</a></li>
+				<li class="page-item"><a class="page-link" href="wineKind.jsp?data=<%=data%>&cnt=84">8</a></li>
+				<li class="page-item"><a class="page-link" href="wineKind.jsp?data=<%=data%>&cnt=96">9</a></li>
+				<li class="page-item"><a class="page-link" href="wineKind.jsp?data=<%=data%>&cnt=108">10</a></li>
 
 				<li class="page-item"><a class="page-link" href="#"
 					aria-label="Next"> <span aria-hidden="true">&raquo;</span>
@@ -702,26 +708,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	
-<!-- 	  jQery
-  <script src="assets/js/jquery-3.4.1.min.js"></script>
-  popper js
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  bootstrap js
-  <script src="assets/js/bootstrap.js"></script>
-  owl slider
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  isotope js
-  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-  nice select
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-  custom js
-  <script src="assets/js/custom.js"></script>
-  Google Map
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  End Google Map -->
+
 
 </body>
 </html>
