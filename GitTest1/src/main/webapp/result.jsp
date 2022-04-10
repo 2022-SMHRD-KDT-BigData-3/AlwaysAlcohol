@@ -28,17 +28,18 @@
 		System.out.println(result+3);
 	%>
 	
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+		<!-- Header -->
+		<header id="header">
 
-							<!-- Logo -->
-								<a href="index.jsp" class="logo">
-									<span class="symbol"><img src="images/logo.png" alt="" /></span><span class="title">Wine Plan</span>
-								</a>
+			<section style="position: absolute; top: 2%; left: 4%;">
+				<!-- Logo -->
+				<a href="index.jsp" class="logo"> <span class="symbol"><img
+						src="images/logo.png" alt="" /></span><span class="title">Wine
+						Plan</span>
+				</a>
+			</section>
 
 							<!-- Nav -->
 								<nav>
@@ -53,7 +54,7 @@
 					<div id="main">
 						<div class="inner">
 				<section>
-					<h1>와인정보</h1>
+					<h1 style="position: relative;left: 102px;">와인정보</h1>
 					<div class="box alt">
 						
 				</section>
@@ -61,7 +62,7 @@
 			
 							<!-- Table -->
 								<section>
-									<form action="#">
+									<form action="#" style="padding: 0 5% 0 5%;position: relative;right: 70px;">
 									<div>
 									<span class="image fit"><img style="width: 38%; height: 604px; float:left; margin: 0% 5% 0% 5%;" src="./images/WineImg/WineImg<%= result %>.jpg"alt="" /></span>
 									</div>
@@ -117,7 +118,7 @@
 
 					<!-- Footer -->
 					<footer id="footer">
-						<div class="inner">
+						<div class="inner" style="margin: 153px;position: relative;top: -85px;">
 							<section>
 								<h2>Get in touch</h2>
 								<form method="post" action="#">

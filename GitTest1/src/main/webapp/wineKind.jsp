@@ -71,7 +71,7 @@
 		</header>
 		<!-- Main -->
 		<div id="main">
-			<div class="inner">
+			<div class="inner" style="position: relative;left: 20px;">
 				<header>
 					<% String data = request.getParameter("data");
 		  					String showWine="";
@@ -634,7 +634,7 @@
 
 		<!-- Footer -->
 		<footer id="footer">
-			<div class="inner">
+			<div class="inner" style="margin: 46px;padding: 0 90px; position: relative; right: 20px;">
 				<section>
 					<h2>Get in touch</h2>
 					<form method="post" action="#">

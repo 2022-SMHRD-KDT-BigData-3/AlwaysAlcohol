@@ -39,8 +39,6 @@ body, .search-bar {
 body {
 	background: #f1f1f1;
 	height: 100vh;
-	position: relative;
-	left: 25%
 }
 
 .search-bar input, .search-btn, .search-btn:before, .search-btn:after {
@@ -67,14 +65,12 @@ body {
 }
 
 .search-bar {
-	margin: auto;
-    padding: 1.5em;
+	padding: 1.5em;
     justify-content: flex-end;
     max-width: 30em;
     position: absolute;
-   	left: 46%;
-    bottom: 86%;
-    margin: 5px;
+    left: 49%;
+    bottom: 83%;
 }
 
 .search-bar input {
@@ -188,7 +184,7 @@ body {
 
 </style>
 </head>
-<body class="is-preload">
+<body class="is-preload" style="position: relative; left: 0;">
 	<!-- Wrapper -->
 	<div id="wrapper">
 
@@ -219,11 +215,11 @@ body {
       <div id="main">
          <div class="inner">
             <section>
-               <h1>와인추천</h1>
+               <h1 style="margin: 0 0 1em 3%;">와인추천</h1>
                <div class="box alt">
                   <div class="row gtr-uniform">
                      <div class="col-12">
-                        <span class="image fit"><img style="margin: 50px 0px 80px 0px;" src="images/wine66.jpg"
+                        <span class="image fit"><img style="padding:0 2% 0 2%" src="images/wine66.jpg"
                            alt="" /></span>
                      </div>
                   </div>
@@ -238,10 +234,10 @@ body {
 
                   <tr>
 
-                     <th>당도</th>
+                     <th style="font-size:25px">당도</th>
 
                      <td colspan="5">
-                        <form action="http://localhost:9000/wine">
+                        <form action="http://localhost:9000/wine" style="margin:0 0 0 0;">
                            <div class="col-4 col-12-big">
                               <input type="radio" id="sweet-low" name="sweet_id" value=1>
                               <label for="sweet-low"> 낮은 당도</label> <input type="radio"
@@ -253,12 +249,13 @@ body {
                                  for="sweet-alittlehigh">조금 높은 당도</label> <input type="radio"
                                  id="sweet-high" name="sweet_id" value=5> <label
                                  for="sweet-high">높은 당도</label>
-                           </div>
-                     </td>
+							</td>
                   </tr>
 
+
+
                   <tr>
-                     <th>바디감</th>
+                     <th style="font-size:25px">바디감</th>
 
 
                      <td colspan="5">
@@ -275,16 +272,15 @@ body {
                               무거운 바디</label> <input type="radio" id="demo-priority-high"
                               name="body_id" value=5> <label
                               for="demo-priority-high">무거운 바디</label>
+					</div>
                      </td>
                   </tr>
 
-                  </tr>
-
                   <tr class="price">
-                     <th>가격</th>
+                     <th style="font-size:25px;">가격</th>
                      <td colspan="5"><input name="price"
                         placeholder="원하는 가격대를 입력해주세요"
-                        style="margin: 2px; width: 90%; height: 41px; position: relative; bottom: 17px;"></td>
+                        style="width: 80%; height: 41px; position: relative; top: 2px;"></td>
                   </tr>
                </table>
 
@@ -300,7 +296,7 @@ body {
 
                <!-- Footer -->
                <footer id="footer">
-                  <div class="inner" style="margin:0px 0px 0px 86px;">
+                  <div class="inner" style="position: relative; top: 19px; left: -20px;text-align: left;margin: 0 0 0 109px;">
                   
            
                      <section>
