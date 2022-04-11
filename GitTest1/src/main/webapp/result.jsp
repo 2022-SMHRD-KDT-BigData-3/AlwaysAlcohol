@@ -117,7 +117,7 @@
 								</section>
 
 					<!-- Footer -->
-					<footer id="footer">
+	<!-- 				<footer id="footer">
 						<div class="inner" style="margin: 153px;position: relative;top: -85px;">
 							<section>
 								<h2>Get in touch</h2>
@@ -158,12 +158,12 @@
 					</footer>
 			</div>
 
-		<!-- Scripts -->
+		Scripts
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-	</body>
+	</body> -->
 </html>
