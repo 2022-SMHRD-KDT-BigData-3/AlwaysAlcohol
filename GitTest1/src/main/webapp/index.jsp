@@ -41,6 +41,9 @@ body, .search-bar {
 body {
 	background: #f1f1f1;
 	height: 100vh;
+	background: #ffffff;
+    position: relative;
+    left: 25%;
 }
 
 .search-bar input, .search-btn, .search-btn:before, .search-btn:after {
