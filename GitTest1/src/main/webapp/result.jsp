@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload" style="position: relative;left: 25%;">
+	<body class="is-preload" style="text-align: center;">
 	
 	<%
 		String res = request.getParameter("result");
