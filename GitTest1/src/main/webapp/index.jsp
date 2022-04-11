@@ -304,7 +304,7 @@ body {
 		</div>
 
 		<!-- Footer -->
-		<footer id="footer">
+		<!-- <footer id="footer">
 			<div class="inner" style="position: relative; top: 55px; left: 55px;">
 				<section>
 					<h2>Get in touch</h2>
@@ -355,12 +355,12 @@ body {
 
 	</div>
 
-	<!-- Scripts -->
+	Scripts
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
+ -->
 </body>
 </html>

@@ -816,7 +816,7 @@ body {
 		</nav>
 
 		<!-- Footer -->
-		<footer id="footer">
+		<!-- <footer id="footer">
 			<div class="inner" style="margin: 46px;padding: 0 90px; position: relative; right: 20px;">
 				<section>
 					<h2>Get in touch</h2>
@@ -867,13 +867,13 @@ body {
 
 	</div>
 
-	<!-- Scripts -->
+	Scripts
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	
+ -->	
 
 
 </body>

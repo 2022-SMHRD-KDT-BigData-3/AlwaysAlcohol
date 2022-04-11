@@ -229,12 +229,11 @@ body {
 				<section>
 					<form action="#">
 						<div>
-							<span class="image fit"><img
-								style="width: 38%; height: 604px; float: left; margin: 0% 5% 0% 5%;"
+							<span class="image fit"><img style="width: 100%; height: 600px; float: left; position: relative;left: 67px;bottom: 39px;"
 								src="./images/WineImg/WineImg<%= wineId %>.jpg" alt="" /></span>
 						</div>
 
-						<div class="table-wrapper">
+						<div class="table-wrapper" style="position: absolute;left: 500px;top: 44%;width: 50%;">
 							<table
 								style="width: 90%; text-align: center; margin-inline: auto;">
 								<thead>
@@ -287,7 +286,7 @@ body {
 				</section>
 
 				<!-- Footer -->
-				<footer id="footer">
+<!-- 				<footer id="footer">
 					<div class="inner" style="margin: 0px 0px 0px 268px;position: relative;right: 8%;">
 						<section>
 							<h2>Get in touch</h2>
@@ -338,11 +337,11 @@ body {
 				</footer>
 			</div>
 
-			<!-- Scripts -->
+			Scripts
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.js"></script> -->
 </body>
 </html>
