@@ -67,11 +67,11 @@
 				</a>
 
 				<!-- Nav -->
-				<nav>
+<!-- 				<nav>
 					<ul>
 						<li><a href="#menu">Menu</a></li>
 					</ul>
-				</nav>
+				</nav> -->
 
 			</div>
 		</header>
@@ -134,7 +134,7 @@
         <% for(int i = 0 ; i < wineList.size() ; i++) {%>
           <div class="col-sm-6 col-lg-4 all pizza">
             <div class="box">
-              <div>
+              <div style="height: 530px;">
                 <div class="img-box">
                 	<% System.out.println("test"); %>
                   <img src="./images/WineImg/WineImg<%= wineList.get(i).getWindId() %>.jpg" alt=""/>
@@ -148,14 +148,14 @@
                     <br>
                     원산지 : <%= wineList.get(i).getCountry() %><br>
                     당도 : <%= wineList.get(i).getSweet() %><br>
-                    가격 : <%= wineList.get(i).getPrice() %>
+                    도수 : <%= wineList.get(i).getProof() %>
                   </p>
                   
                   <div class="options">
                     <h9>
-                     <%= wineList.get(i).getProof() %>
+                    <%= wineList.get(i).getPrice() %>
                     </h9>
-                    <a href="">
+                    <!-- <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                         <g>
                           <g>
@@ -178,7 +178,7 @@
                           </g>
                         </g>
                       </svg>
-                    </a>
+                    </a> -->
                   </div>
                 </div>
               </div>
@@ -595,7 +595,7 @@
 		</div>
 
 		<!-- 페이지 이동  -->
-		<nav aria-label="Page navigation example">
+<%-- 		<nav aria-label="Page navigation example">
 			<ul class="pagination">
 			<!-- 이전으로 -->
 				<li class="page-item"><a class="page-link" href="#"
@@ -619,7 +619,7 @@
 					aria-label="Next"> <span aria-hidden="true">&raquo;</span>
 				</a></li>
 			</ul>
-		</nav>
+		</nav> --%>
 
 		<!-- Footer -->
 		<footer id="footer">
