@@ -50,47 +50,28 @@
   <link href="assets/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="assets/css/responsive.css" rel="stylesheet" />
+
+
 </head>
 <body class="is-preload">
 	<!-- Wrapper -->
 	<div id="wrapper">
 
 		<!-- Header -->
-
 		<header id="header">
-			<div class="inner">
 
+			<section style="position: absolute; top: 2%; left: 2%;">
 				<!-- Logo -->
-				<a href="index.jsp" class="logo">
-				<span class="symbol"><imgsrc="images/logo.png" alt="" /></span>
-				<span class="title">Wine Plan</span>
+				<a href="index.jsp" class="logo"> <span class="symbol"><img
+						src="images/logo.png" alt="" /></span><span class="title">Wine
+						Plan</span>
 				</a>
+			</section>
 
-<!-- 				Nav
-				<nav>
-					<ul>
-						<li><a href="#menu">Menu</a></li>
-					</ul>
-				</nav>
- -->
-			</div>
 		</header>
-
-		<!-- Menu -->
-		<nav id="menu">
-			<h2>Menu</h2>
-			<ul>
-				<li><a href="index.jsp">Home</a></li>
-				<li><a href="generic.html">Ipsum veroeros</a></li>
-				<li><a href="generic.html">Tempus etiam</a></li>
-				<li><a href="generic.html">Consequat dolor</a></li>
-				<li><a href="signin.html">Login</a></li>
-			</ul>
-		</nav>
-
 		<!-- Main -->
 		<div id="main">
-			<div class="inner">
+			<div class="inner" style="position: relative;left: 20px;">
 				<header>
 					<% String data = request.getParameter("data");
 		  					String showWine="";
@@ -123,7 +104,7 @@
 		  			%>
 					<h1><%= showWine %></h1>
 					<br>
-					<p>세계의 모든 <%= showWineK %>, 바로 여기에</p>
+					<p style="color:#545454;">세계의 모든 <%= showWineK %>, 바로 여기에</p>
 				</header>
 				
 				<!-- <section class="tiles"> -->
@@ -626,7 +607,7 @@
 		</div>
 
 		<!-- 페이지 이동  -->
-		<nav aria-label="Page navigation example">
+		<nav aria-label="Page navigation example" style="position: relative;right: 23%;">
 			<ul class="pagination">
 			<!-- 이전으로 -->
 				<li class="page-item"><a class="page-link" href="#"
@@ -653,7 +634,7 @@
 
 		<!-- Footer -->
 		<footer id="footer">
-			<div class="inner">
+			<div class="inner" style="margin: 46px;padding: 0 90px; position: relative; right: 20px;">
 				<section>
 					<h2>Get in touch</h2>
 					<form method="post" action="#">

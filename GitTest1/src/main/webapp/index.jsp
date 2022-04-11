@@ -41,13 +41,12 @@ body, .search-bar {
 body {
 	background: #f1f1f1;
 	height: 100vh;
-	position: relative;
-	left: 25%
 }
 
 .search-bar input, .search-btn, .search-btn:before, .search-btn:after {
 	transition: all 0.25s ease-out;
 }
+
 
 .search-bar input, .search-btn {
 	width: 3em;
@@ -68,15 +67,11 @@ body {
 }
 
 .search-bar {
-	margin: auto;
-    padding: 1.5em;
-    justify-content: flex-end;
+	justify-content: flex-end;
     max-width: 30em;
     position: absolute;
-    left: 2000px;
-    bottom: 92%;
-    margin: 5px;
-}
+    left: 48%;
+    bottom: 82%;
 }
 
 .search-bar input {
@@ -199,7 +194,7 @@ body {
 
 			<section style="position: absolute; top: 2%; left: 4%;">
 				<!-- Logo -->
-				<a href="index.html" class="logo"> <span class="symbol"><img
+				<a href="index.jsp" class="logo"> <span class="symbol"><img
 						src="images/logo.png" alt="" /></span><span class="title">Wine
 						Plan</span>
 				</a>
@@ -225,11 +220,11 @@ body {
 				<header>
 
 		<div style="font-family: "Source Sans Pro", Helvetica, sans-serif;">
-                  <h1 style="text-align: left; color: #585858;position: relative;left: 105px;line-height: 1.4;font-size: 168px;">
+                  <h1 style="text-align: left; color: #585858;position: relative;left: 105px;line-height: 1.4;font-size: 85px;">
                      여러분의 취향에 맞는<br>여러종류의 와인을<br>추천받아 보세요!
                   </h1>
                   <h4
-                     style="font-weight: 400; font-size: 68px; line-height: 2; margin: 0 0 0px 0; letter-spacing: 0; position: relative; left: 121px;bottom: 92px;color: #585858;">
+                     style="font-weight: 400; font-size: 30px; line-height: 2; margin: 0px 0 0px 0; letter-spacing: 0; position: relative; left: 121px;bottom: 69px;color: #585858;">
                      당도, 바디감, 가격만 선택하시면 원하시는 와인을 추천해드립니다.</h4>
                   <button class="button1" id="move_wine"
                      style="position: relative; left: 115px; bottom: 17px; border-radius: 23px;">
@@ -310,7 +305,7 @@ body {
 
 		<!-- Footer -->
 		<footer id="footer">
-			<div class="inner">
+			<div class="inner" style="position: relative; top: 55px; left: 55px;">
 				<section>
 					<h2>Get in touch</h2>
 					<form method="post" action="#">

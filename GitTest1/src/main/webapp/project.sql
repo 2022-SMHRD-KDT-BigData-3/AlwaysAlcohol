@@ -1,30 +1,11 @@
---프로젝트DB의 테이블은 전부 삭제했습니다
---사용자 테이블과 이와 관련된 테이블의 경우 사용하지 않을 수도 있습니다
-
-DROP TABLE member CASCADE CONSTRAINTS;
 DROP TABLE body CASCADE CONSTRAINTS;
 DROP TABLE sweet CASCADE CONSTRAINTS;
 DROP TABLE country CASCADE CONSTRAINTS;
 DROP TABLE kind CASCADE CONSTRAINTS;
-DROP TABLE wine CASCADE CONSTRAINTS;
-DROP TABLE reply CASCADE CONSTRAINTS;
-DROP TABLE push CASCADE CONSTRAINTS;
 DROP TABLE tanin CASCADE CONSTRAINTS;
 DROP TABLE acid CASCADE CONSTRAINTS;
+DROP TABLE wine CASCADE CONSTRAINTS;
 DROP TABLE wine2 CASCADE CONSTRAINTS;
-
---사용자
--- 남자 : 0, 여자 : 1
-CREATE TABLE member
-(member_id VARCHAR2(15),
- pw VARCHAR2(20) NOT NULL,
- nick VARCHAR2(25) NOT NULL,
- member_name VARCHAR2(25) NOT NULL,
- gender VARCHAR2(2),
- birth DATE NOT NULL,
- join_date DATE DEFAULT SYSDATE NOT NULL,
- CONSTRAINT mem_id_pk PRIMARY KEY(member_id),
- CONSTRAINT mem_gender_ck CHECK(gender IN('0','1')));
  
 --산도
 CREATE TABLE acid
@@ -44,9 +25,6 @@ CREATE TABLE sweet
  sweet_name VARCHAR2(50) NOT NULL,
  CONSTRAINT sweet_id_pk PRIMARY KEY(sweet_id));
 
-  
-select *from body;
-select *from SWEET;
 --국가
 CREATE TABLE country
 (country_id NUMBER(10),
@@ -104,29 +82,7 @@ CREATE TABLE wine2
  price VARCHAR2(300) NOT NULL,
  img VARCHAR2(999) NOT NULL,
  CONSTRAINT wine2_id_pk PRIMARY KEY(wine_id));
- 
---와인 댓글(평가 포함)
-CREATE TABLE reply
-(reply_id NUMBER(10),
- member_id VARCHAR2(15),
- wine_id NUMBER(10),
- reply_score NUMBER(10) NOT NULL,
- reply_content VARCHAR(50) NOT NULL,
- reply_date DATE DEFAULT SYSDATE NOT NULL,
- CONSTRAINT reply_id_pk PRIMARY KEY(reply_id),
- CONSTRAINT reply_mem_fk FOREIGN KEY(member_id) REFERENCES member(member_id),
- CONSTRAINT reply_cock_fk FOREIGN KEY(wine_id) REFERENCES wine(wine_id));
-
---추천받은 와인
-CREATE TABLE push
-(push_id NUMBER(10),
- member_id VARCHAR2(15),
- wine_id NUMBER(10),
- push_date DATE DEFAULT SYSDATE NOT NULL,
- CONSTRAINT push_id_pk PRIMARY KEY(push_id),
- CONSTRAINT push_mem_fk FOREIGN KEY(member_id) REFERENCES member(member_id),
- CONSTRAINT push_cock_fk FOREIGN KEY(wine_id) REFERENCES wine(wine_id));
- 
+  
  
 SELECT * FROM wine;
 SELECT * FROM wine2;

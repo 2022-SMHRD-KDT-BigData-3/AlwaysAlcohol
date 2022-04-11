@@ -21,20 +21,20 @@
 
 <meta charset="utf-8" />
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no" />
+   content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
 <noscript>
-	<link rel="stylesheet" href="assets/css/noscript.css" />
+   <link rel="stylesheet" href="assets/css/noscript.css" />
 </noscript>
 <link rel="stylesheet" href="assets/css/button.css" />
 
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+   href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+   src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+   src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
@@ -52,110 +52,71 @@
   <link href="assets/css/responsive.css" rel="stylesheet" />
 </head>
 <body class="is-preload">
-	<!-- Wrapper -->
-	<div id="wrapper">
+   <!-- Wrapper -->
+   <div id="wrapper">
 
-		<!-- Header -->
+      <!-- Header -->
+      <header id="header">
 
-		<header id="header">
-			<div class="inner">
-
-				<!-- Logo -->
-				<a href="index.jsp" class="logo"> <span class="symbol"><img
-						src="images/logo.png" alt="" /></span><span class="title">Wine
-						Plan</span>
-				</a>
-
-				<!-- Nav -->
-<!-- 				<nav>
-					<ul>
-						<li><a href="#menu">Menu</a></li>
-					</ul>
-				</nav> -->
-
-			</div>
-		</header>
-
-		<!-- Menu -->
-		<nav id="menu">
-			<h2>Menu</h2>
-			<ul>
-				<li><a href="index.jsp">Home</a></li>
-				<li><a href="generic.html">Ipsum veroeros</a></li>
-				<li><a href="generic.html">Tempus etiam</a></li>
-				<li><a href="generic.html">Consequat dolor</a></li>
-				<li><a href="signin.html">Login</a></li>
-			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-			<div class="inner">
-				<header>
-					
-					<h1>검색 결과</h1>
-					<br>
-					<hr>
-				</header>
-				
-				<!-- <section class="tiles"> -->
-					  <section class="food_section layout_padding-bottom">
+         <section style="position: absolute; top: 2%; left: 4%;">
+            <!-- Logo -->
+            <a href="index.jsp" class="logo"> <span class="symbol"><img
+                  src="images/logo.png" alt="" /></span><span class="title">Wine
+                  Plan</span>
+            </a>
+         </section>
+         </header>
+      <!-- Main -->
+      <div id="main">
+         <div class="inner">
+            <header>
+               
+               <h1 style="position: relative;left: 3%;">검색 결과</h1>
+               <br>
+               <hr>
+            </header>
+            
+            <!-- <section class="tiles"> -->
+                 <section class="food_section layout_padding-bottom">
     <div class="container">
-    
-<!-- 상단 네임 -->    
-<!--       <div class="heading_container heading_center">
-        <h2>
-          Our Menu
-        </h2>
-      </div> -->
-
-<!-- 메뉴바 -->
-<!--       <ul class="filters_menu">
-        <li class="active" data-filter="*">All</li>
-        <li data-filter=".burger">Burger</li>
-        <li data-filter=".pizza">Pizza</li>
-        <li data-filter=".pasta">Pasta</li>
-        <li data-filter=".fries">Fries</li>
-      </ul> -->
-	
       <div class="filters-content">
         <div class="row grid">
 <%--         <% int pageNum = 1; %>
          <% 
-        	
-        	pageNum = Integer.parseInt(request.getParameter("pageNumber")); 
-        	%> --%>
-        	<% String search = request.getParameter("search");
-		  					
-		  		WineDAO dao = new WineDAO();
-		  		ArrayList<WineDTO> wineList = dao.SerchWine(search);
-		  			
-		  			%>
+           
+           pageNum = Integer.parseInt(request.getParameter("pageNumber")); 
+           %> --%>
+           <% String search = request.getParameter("search");
+                       
+              WineDAO dao = new WineDAO();
+              ArrayList<WineDTO> wineList = dao.SerchWine(search);
+                 
+                 %>
         <% for(int i = 0 ; i < wineList.size() ; i++) {%>
           <div class="col-sm-6 col-lg-4 all pizza">
             <div class="box">
-              <div style="height: 530px;">
+              <div>
                 <div class="img-box">
-                	<% System.out.println("test"); %>
+                   <% System.out.println("test"); %>
                   <img src="./images/WineImg/WineImg<%= wineList.get(i).getWindId() %>.jpg" alt=""/>
                   
                 </div>
                 <div class="detail-box">
                   <span>
-                 	<%= wineList.get(i).getWineName() %>
+                    <%= wineList.get(i).getWineName() %>
                   </span>
                   <p>
                     <br>
                     원산지 : <%= wineList.get(i).getCountry() %><br>
                     당도 : <%= wineList.get(i).getSweet() %><br>
-                    도수 : <%= wineList.get(i).getProof() %>
+                    가격 : <%= wineList.get(i).getPrice() %>
                   </p>
                   
                   <div class="options">
                     <h9>
-                    <%= wineList.get(i).getPrice() %>
+                     <%= wineList.get(i).getProof() %>
                     </h9>
-                    <!-- <a href="">
+                    <a href="">
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                         <g>
                           <g>
@@ -178,7 +139,7 @@
                           </g>
                         </g>
                       </svg>
-                    </a> -->
+                    </a>
                   </div>
                 </div>
               </div>
@@ -589,98 +550,98 @@
       
     </div>
   </section>
-					
-				</section>
-			</div>
-		</div>
+               
+            </section>
+         </div>
+      </div>
 
-		<!-- 페이지 이동  -->
-<%-- 		<nav aria-label="Page navigation example">
-			<ul class="pagination">
-			<!-- 이전으로 -->
-				<li class="page-item"><a class="page-link" href="#"
-					aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
-				</a></li>
-				
-				<% %>
-				 
-				<li class="page-item"><a class="page-link" href="#">1</a></li>
-				<li class="page-item"><a class="page-link" href="#">2</a></li>
-				<li class="page-item"><a class="page-link" href="#">3</a></li>
-				<li class="page-item"><a class="page-link" href="#">4</a></li>
-				<li class="page-item"><a class="page-link" href="#">5</a></li>
-				<li class="page-item"><a class="page-link" href="#">6</a></li>
-				<li class="page-item"><a class="page-link" href="#">7</a></li>
-				<li class="page-item"><a class="page-link" href="#">8</a></li>
-				<li class="page-item"><a class="page-link" href="#">9</a></li>
-				<li class="page-item"><a class="page-link" href="#">10</a></li>
+      <!-- 페이지 이동  -->
+      <%-- nav aria-label="Page navigation example">
+         <ul class="pagination">
+         <!-- 이전으로 -->
+            <li class="page-item"><a class="page-link" href="#"
+               aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
+            </a></li>
+            
+            <% %>
+             
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">6</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item"><a class="page-link" href="#">10</a></li>
 
-				<li class="page-item"><a class="page-link" href="#"
-					aria-label="Next"> <span aria-hidden="true">&raquo;</span>
-				</a></li>
-			</ul>
-		</nav> --%>
+            <li class="page-item"><a class="page-link" href="#"
+               aria-label="Next"> <span aria-hidden="true">&raquo;</span>
+            </a></li>
+         </ul>
+      </nav> --%>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<div class="inner">
-				<section>
-					<h2>Get in touch</h2>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<input type="text" name="name" id="name" placeholder="Name" />
-							</div>
-							<div class="field half">
-								<input type="email" name="email" id="email" placeholder="Email" />
-							</div>
-							<div class="field">
-								<textarea name="message" id="message" placeholder="Message"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send" class="primary" /></li>
-						</ul>
-					</form>
-				</section>
-				<section>
-					<h2>Follow</h2>
-					<ul class="icons">
-						<li><a href="#" class="icon brands style2 fa-twitter"><span
-								class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands style2 fa-facebook-f"><span
-								class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands style2 fa-instagram"><span
-								class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands style2 fa-dribbble"><span
-								class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands style2 fa-github"><span
-								class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon brands style2 fa-500px"><span
-								class="label">500px</span></a></li>
-						<li><a href="#" class="icon solid style2 fa-phone"><span
-								class="label">Phone</span></a></li>
-						<li><a href="#" class="icon solid style2 fa-envelope"><span
-								class="label">Email</span></a></li>
-					</ul>
-				</section>
-				<ul class="copyright">
-					<li>&copy; Untitled. All rights reserved</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</footer>
+      <!-- Footer -->
+      <footer id="footer">
+         <div class="inner" style="margin: 0 0px 0px 40px;padding: 0 90px;">
+            <section>
+               <h2>Get in touch</h2>
+               <form method="post" action="#">
+                  <div class="fields">
+                     <div class="field half">
+                        <input type="text" name="name" id="name" placeholder="Name" />
+                     </div>
+                     <div class="field half">
+                        <input type="email" name="email" id="email" placeholder="Email" />
+                     </div>
+                     <div class="field">
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                     </div>
+                  </div>
+                  <ul class="actions">
+                     <li><input type="submit" value="Send" class="primary" /></li>
+                  </ul>
+               </form>
+            </section>
+            <section>
+               <h2>Follow</h2>
+               <ul class="icons">
+                  <li><a href="#" class="icon brands style2 fa-twitter"><span
+                        class="label">Twitter</span></a></li>
+                  <li><a href="#" class="icon brands style2 fa-facebook-f"><span
+                        class="label">Facebook</span></a></li>
+                  <li><a href="#" class="icon brands style2 fa-instagram"><span
+                        class="label">Instagram</span></a></li>
+                  <li><a href="#" class="icon brands style2 fa-dribbble"><span
+                        class="label">Dribbble</span></a></li>
+                  <li><a href="#" class="icon brands style2 fa-github"><span
+                        class="label">GitHub</span></a></li>
+                  <li><a href="#" class="icon brands style2 fa-500px"><span
+                        class="label">500px</span></a></li>
+                  <li><a href="#" class="icon solid style2 fa-phone"><span
+                        class="label">Phone</span></a></li>
+                  <li><a href="#" class="icon solid style2 fa-envelope"><span
+                        class="label">Email</span></a></li>
+               </ul>
+            </section>
+            <ul class="copyright">
+               <li>&copy; Untitled. All rights reserved</li>
+               <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+         </div>
+      </footer>
 
-	</div>
+   </div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	
-<!-- 	  jQery
+   <!-- Scripts -->
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/browser.min.js"></script>
+   <script src="assets/js/breakpoints.min.js"></script>
+   <script src="assets/js/util.js"></script>
+   <script src="assets/js/main.js"></script>
+   
+<!--      jQery
   <script src="assets/js/jquery-3.4.1.min.js"></script>
   popper js
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
