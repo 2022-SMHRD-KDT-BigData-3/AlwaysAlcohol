@@ -98,8 +98,9 @@
               <div>
                 <div class="img-box">
                    <% System.out.println("test"); %>
+                   <a href = "detail.jsp?wineId=<%=wineList.get(i).getWindId() %>">
                   <img src="./images/WineImg/WineImg<%= wineList.get(i).getWindId() %>.jpg" alt=""/>
-                  
+                  </a>
                 </div>
                 <div class="detail-box">
                   <span>
