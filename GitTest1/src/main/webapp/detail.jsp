@@ -205,9 +205,7 @@ body {
 					</button>
 				</form>
 			</div>
-
-		</header>
-			
+	
 		</header>
 
 
@@ -216,7 +214,7 @@ body {
 		<div id="main">
 			<div class="inner">
 				<section>
-					<h1>와인정보</h1>
+					<h1 style="position: relative;left: 40px;">와인정보</h1>
 					<div class="box alt">
 				</section>
 				<% 
