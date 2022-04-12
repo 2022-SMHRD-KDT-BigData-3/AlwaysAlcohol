@@ -79,8 +79,8 @@ body, .search-bar {
 body {
 	background: #f1f1f1;
 	height: 100vh;
-    position: relative;
-    left: 25%;
+    display: flex;
+    justify-content: center;
 }
 
 .search-bar input, .search-btn, .search-btn:before, .search-btn:after {
@@ -110,7 +110,7 @@ body {
 	justify-content: flex-end;
     max-width: 30em;
     position: absolute;
-    left: 48%;
+    left: 55%;
     bottom: 82%;
 }
 
@@ -222,7 +222,10 @@ body {
 		background: #f1f1f1;
 	}
 	
-
+	html,body,#wrapper{
+		width: 100%;
+		height: 100%;
+	}
 </style>
 
 </head>
@@ -233,7 +236,7 @@ body {
 		<!-- Header -->
 		<header id="header">
 
-			<section style="position: absolute; top: 2%; left: 2%;">
+			<section style="position: absolute; top: 2%; left: 10%;">
 				<!-- Logo -->
 				<a href="index.jsp" class="logo"> <span class="symbol"><img
 						src="images/logo.png" alt="" /></span><span class="title">Wine

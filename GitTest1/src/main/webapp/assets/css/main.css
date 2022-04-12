@@ -1,12 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 
-/*
-   Phantom by HTML5 UP
-   html5up.net | @ajlkn
-   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -2391,6 +2385,7 @@ input, select, textarea {
 
       table td {
          padding: 0.75em 0.75em;
+         text-align: center;
          
       }
 
@@ -2398,6 +2393,7 @@ input, select, textarea {
         font-size: 22px;
    		font-weight: 900;
     	padding: 0;
+    	text-align: center;
       }
 
       table thead {

@@ -3,11 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Wine Plan</title>
@@ -15,8 +11,185 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+				<style type="text/css">
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	font-size: calc(16px + ( 24 - 16)*(100vw- 320px)/(1920- 320));
+}
+
+body, button, input {
+	font: 1em Hind, sans-serif;
+	line-height: 1.5em;
+}
+
+body, input {
+	color: #171717;
+}
+
+body, .search-bar {
+	display: flex;
+}
+
+body {
+	background: #f1f1f1;
+	height: 100vh;
+}
+
+.search-bar input, .search-btn, .search-btn:before, .search-btn:after {
+	transition: all 0.25s ease-out;
+}
+
+
+.search-bar input, .search-btn {
+	width: 3em;
+	height: 3em;
+}
+
+.search-bar input:invalid:not(:focus), .search-btn {
+	cursor: pointer;
+}
+
+.search-bar, .search-bar input:focus, .search-bar input:valid {
+	width: 50%;
+}
+
+.search-bar input:focus, .search-bar input:not(:focus)+.search-btn:focus
+	{
+	outline: transparent;
+}
+
+.search-bar {
+	justify-content: flex-end;
+    max-width: 30em;
+    position: absolute;
+    left: 55%;
+    bottom: 91%;
+}
+
+.search-bar input {
+	background: transparent;
+	border-radius: 1.5em;
+	box-shadow: 0 0 0 0.4em #171717 inset;
+	padding: 0.75em;
+	transform: translate(0.5em, 0.5em) scale(0.5);
+	transform-origin: 100% 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.search-bar input::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+.search-bar input:focus, .search-bar input:valid {
+	background: #fff;
+	border-radius: 0.375em 0 0 0.375em;
+	box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+	transform: scale(1);
+}
+
+.search-btn {
+	background: #171717;
+	border-radius: 0 0.75em 0.75em 0/0 1.5em 1.5em 0;
+	padding: 0.75em;
+	position: relative;
+	transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
+	transform-origin: 0 50%;
+}
+
+.search-btn:before, .search-btn:after {
+	content: "";
+	display: block;
+	opacity: 0;
+	position: absolute;
+}
+
+.search-btn:before {
+	border-radius: 50%;
+	box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+	top: 0.75em;
+	left: 0.75em;
+	width: 1.2em;
+	height: 1.2em;
+}
+
+.search-btn:after {
+	background: #f1f1f1;
+	border-radius: 0 0.25em 0.25em 0;
+	top: 51%;
+	left: 51%;
+	width: 0.75em;
+	height: 0.25em;
+	transform: translate(0.2em, 0) rotate(45deg);
+	transform-origin: 0 50%;
+}
+
+.search-btn span {
+	display: inline-block;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+}
+
+/* Active state */
+.search-bar input:focus+.search-btn, .search-bar input:valid+.search-btn
+	{
+	background: black;
+	border-radius: 0 0.375em 0.375em 0;
+	transform: scale(1);
+}
+
+.search-bar input:focus+.search-btn:before, .search-bar input:focus+.search-btn:after,
+	.search-bar input:valid+.search-btn:before, .search-bar input:valid+.search-btn:after
+	{
+	opacity: 1;
+}
+
+.search-bar input:focus+.search-btn:hover, .search-bar input:valid+.search-btn:hover,
+	.search-bar input:valid:not(:focus)+.search-btn:focus {
+	background: black;
+}
+
+.search-bar input:focus+.search-btn:active, .search-bar input:valid+.search-btn:active
+	{
+	transform: translateY(1px);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	body, input {
+		color: #f1f1f1;
+	}
+	body {
+		background: #171717;
+	}
+	.search-bar input {
+		box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+	}
+	.search-bar input:focus, .search-bar input:valid {
+		background: #3d3d3d;
+		box-shadow: 0 0 0 0.1em #3d3d3d inset;
+	}
+	.search-btn {
+		background: #f1f1f1;
+	}
+	
+	html,body,#wrapper{
+		width: 100%;
+		height: 100%;
+	}
+	
+	
+</style>
 	</head>
-	<body class="is-preload" style="position: relative; left: 25%;">
+	<body class="is-preload" style="display: flex;justify-content: center; width: 100%; height: 100%;">
 	
 	<%
 		String res = request.getParameter("result");
@@ -33,7 +206,7 @@
 		<!-- Header -->
 		<header id="header">
 
-			<section style="position: absolute; top: 2%; left: 4%;">
+			<section style="position: absolute; top: 2%; left: 10%;">
 				<!-- Logo -->
 				<a href="index.jsp" class="logo"> <span class="symbol"><img
 						src="images/logo.png" alt="" /></span><span class="title">Wine
@@ -41,12 +214,16 @@
 				</a>
 			</section>
 
-							<!-- Nav -->
-								<nav>
-								<!-- 검색창 보류 -->
-								
-								</nav>
-						</div>
+							
+								<!-- 검색창 -->
+			<div class="container">
+				<form action="SearchWine.jsp" class="search-bar">
+					<input type="search" name="search" pattern=".*\S.*" required>
+					<button class="search-btn" type="submit">
+						<span>Search</span>
+					</button>
+				</form>
+			</div>
 					</header>
 
 
@@ -54,7 +231,7 @@
 					<div id="main">
 						<div class="inner">
 				<section>
-					<h1 style="position: relative;left: 102px;">와인정보</h1>
+				<h1 style="position: absolute;top: 10%;left: 12%;">와인정보</h1>
 					<div class="box alt">
 						
 				</section>
@@ -62,13 +239,13 @@
 			
 							<!-- Table -->
 								<section>
-									<form action="#" style="padding: 0 5% 0 5%;position: relative;right: 70px;">
+									<form action="#" >
 									<div>
-									<span class="image fit"><img style="width: 38%; height: 604px; float:left; margin: 0% 5% 0% 5%;" src="./images/WineImg/WineImg<%= result %>.jpg"alt="" /></span>
+									<span class="image fit"><img style="width: 500px; height: 713px; float: left; position: fixed; left: 9%; margin: 2%;bottom: 19%;" src="./images/WineImg/WineImg<%= result %>.jpg"alt="" /></span>
 									</div>
 									
 									<div class="table-wrapper">
-										<table style="width: 90%; text-align: center; margin-inline: auto;">
+										<table style="text-align:center; position: absolute;left: 33%;width: 40%;bottom: 22%;margin: 0 auto;height: 58%;font-size: large;">
 											<thead>
 												<tr>
 													<th>이름</th>
@@ -116,54 +293,5 @@
 									</form>
 								</section>
 
-					<!-- Footer -->
-	<!-- 				<footer id="footer">
-						<div class="inner" style="margin: 153px;position: relative;top: -85px;">
-							<section>
-								<h2>Get in touch</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-							<section>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-			</div>
-
-		Scripts
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body> -->
+	</body>
 </html>

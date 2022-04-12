@@ -39,8 +39,8 @@ body, .search-bar {
 body {
 	background: #f1f1f1;
 	height: 100vh;
-	position: relative;
-    left: 25%;
+	display: flex;
+    justify-content: center;
 }
 
 .search-bar input, .search-btn, .search-btn:before, .search-btn:after {
@@ -71,7 +71,7 @@ body {
     justify-content: flex-end;
     max-width: 30em;
     position: absolute;
-    left: 49%;
+    left: 55%;
     bottom: 83%;
 }
 
@@ -182,8 +182,11 @@ body {
 	.search-btn {
 		background: #f1f1f1;
 	}
-	}
 
+	html,body,#wrapper{
+		width: 100%;
+		height: 100%;
+	}
 </style>
 </head>
 <body class="is-preload" style="position: relative; left: 0;">
@@ -193,7 +196,7 @@ body {
 		<!-- Header -->
 		<header id="header">
 
-			<section style="position: absolute; top: 2%; left: 2%;">
+			<section style="position: absolute; top: 2%; left: 10%;">
 				<!-- Logo -->
 				<a href="index.jsp" class="logo"> <span class="symbol"><img
 						src="images/logo.png" alt="" /></span><span class="title">Wine
@@ -231,7 +234,7 @@ body {
             <!-- Table -->
 
             <br>
-            <div class="table-wrapper" style="text-align: center;">
+            <div class="table-wrapper" >
                <table>
 
                   <tr>
@@ -251,6 +254,7 @@ body {
                                  for="sweet-alittlehigh">조금 높은 당도</label> <input type="radio"
                                  id="sweet-high" name="sweet_id" value=5> <label
                                  for="sweet-high">높은 당도</label>
+                                 </div>
 							</td>
                   </tr>
 
@@ -284,6 +288,7 @@ body {
                         placeholder="원하는 가격대를 입력해주세요"
                         style="width: 80%; height: 41px; position: relative; top: 2px;"></td>
                   </tr>
+                  
                </table>
 
                <button type="reset">reset</button>
@@ -296,67 +301,5 @@ body {
 
 
 
-               <!-- Footer -->
-               <!-- <footer id="footer">
-                  <div class="inner" style="position: relative; top: 19px; left: -20px;text-align: left;margin: 0 0 0 109px;">
-                  
-           
-                     <section>
-                        <h2>Get in touch</h2>
-                        <form method="post" action="#">
-                           <div class="fields">
-                              <div class="field half">
-                                 <input type="text" name="name" id="name" placeholder="Name" />
-                              </div>
-                              <div class="field half">
-                                 <input type="email" name="email" id="email"
-                                    placeholder="Email" />
-                              </div>
-                              <div class="field">
-                                 <textarea name="message" id="message" placeholder="Message"></textarea>
-                              </div>
-                           </div>
-                           <ul class="actions">
-                              <li><input type="submit" value="Send" class="primary" /></li>
-                           </ul>
-                        </form>
-                     </section>
-                     <section>
-                        <h2>Follow</h2>
-                        <ul class="icons">
-                           <li><a href="#" class="icon brands style2 fa-twitter"><span
-                                 class="label">Twitter</span></a></li>
-                           <li><a href="#" class="icon brands style2 fa-facebook-f"><span
-                                 class="label">Facebook</span></a></li>
-                           <li><a href="#" class="icon brands style2 fa-instagram"><span
-                                 class="label">Instagram</span></a></li>
-                           <li><a href="#" class="icon brands style2 fa-dribbble"><span
-                                 class="label">Dribbble</span></a></li>
-                           <li><a href="#" class="icon brands style2 fa-github"><span
-                                 class="label">GitHub</span></a></li>
-                           <li><a href="#" class="icon brands style2 fa-500px"><span
-                                 class="label">500px</span></a></li>
-                           <li><a href="#" class="icon solid style2 fa-phone"><span
-                                 class="label">Phone</span></a></li>
-                           <li><a href="#" class="icon solid style2 fa-envelope"><span
-                                 class="label">Email</span></a></li>
-                        </ul>
-                     </section>
-                     <ul class="copyright">
-                        <li>&copy; Untitled. All rights reserved</li>
-                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                     </ul>
-                  </div>
-               </footer>
-
-            </div>
-
-            Scripts
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
- -->
  </body>
 </html>

@@ -3,7 +3,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<style type="text/css">
+
+<html>
+	<head>
+		<title>Wine Plan</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<style type="text/css">
 * {
 	border: 0;
 	box-sizing: border-box;
@@ -31,8 +40,6 @@ body, .search-bar {
 body {
 	background: #f1f1f1;
 	height: 100vh;
-	position: relative;
-    left: 25%;
 }
 
 .search-bar input, .search-btn, .search-btn:before, .search-btn:after {
@@ -62,8 +69,8 @@ body {
 	justify-content: flex-end;
     max-width: 30em;
     position: absolute;
-    left: 48%;
-    bottom: 82%;
+    left: 55%;
+    bottom: 90%;
 }
 
 .search-bar input {
@@ -174,23 +181,23 @@ body {
 		background: #f1f1f1;
 	}
 	
-
+	html,body,#wrapper{
+		width: 100%;
+		height: 100%;
+	}
+	
+	
 </style>
-<html>
-	<head>
-		<title>Wine Plan</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	
+	<body class="is-preload" style="width: 100%; display: flex;text-align: center;align-items: center;">
 	<!-- Wrapper -->
-	<div id="wrapper">
+	<div id="wrapper" style="width: 100%;">
 
 		<!-- Header -->
 		<header id="header">
-			<section style="position:absolute;top: 2%; left: 2%;">
+			<section style="position: absolute; top: 2%; left: 10%;">
+			
 				<!-- Logo -->
 				<a href="index.jsp" class="logo"> <span class="symbol"><img
 						src="images/logo.png" alt="" /></span><span class="title">Wine
@@ -216,7 +223,7 @@ body {
 		<div id="main">
 			<div class="inner">
 				<section>
-					<h1 style="position: relative;left: 40px;">와인정보</h1>
+					<h1 style="color:#585858; position: absolute;top: 10%;left: 12%;">와인정보</h1>
 					<div class="box alt">
 				</section>
 				<% 
@@ -231,13 +238,11 @@ body {
 				<section>
 					<form action="#">
 						<div>
-							<span class="image fit"><img style="width: 100%; height: 600px; float: left; position: relative;left: 67px;bottom: 39px;"
-								src="./images/WineImg/WineImg<%= wineId %>.jpg" alt="" /></span>
+							<span class="image fit"><img style="width: 500px; height: 713px; float: left; position: fixed; left: 9%; margin: 0 auto;bottom: 4%;" src="./images/WineImg/WineImg<%= wineId %>.jpg" alt="" /></span>
 						</div>
 
-						<div class="table-wrapper" style="position: absolute;left: 500px;top: 44%;width: 50%;">
-							<table
-								style="width: 90%; text-align: center; margin-inline: auto;">
+						<div class="table-wrapper">
+							<table style="text-align:center; position: absolute;left: 38%;width: 40%;bottom: 7%;margin: 0 auto;height: 70%;font-size: large;">
 								<thead>
 									<tr>
 										<th>이름</th>
@@ -287,63 +292,5 @@ body {
 					</form>
 				</section>
 
-				<!-- Footer -->
-<!-- 				<footer id="footer">
-					<div class="inner" style="margin: 0px 0px 0px 268px;position: relative;right: 8%;">
-						<section>
-							<h2>Get in touch</h2>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="field half">
-										<input type="email" name="email" id="email"
-											placeholder="Email" />
-									</div>
-									<div class="field">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send" class="primary" /></li>
-								</ul>
-							</form>
-						</section>
-						<section>
-							<h2>Follow</h2>
-							<ul class="icons">
-								<li><a href="#" class="icon brands style2 fa-twitter"><span
-										class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-facebook-f"><span
-										class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-instagram"><span
-										class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-dribbble"><span
-										class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-github"><span
-										class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-500px"><span
-										class="label">500px</span></a></li>
-								<li><a href="#" class="icon solid style2 fa-phone"><span
-										class="label">Phone</span></a></li>
-								<li><a href="#" class="icon solid style2 fa-envelope"><span
-										class="label">Email</span></a></li>
-							</ul>
-						</section>
-						<ul class="copyright">
-							<li>&copy; Untitled. All rights reserved</li>
-							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-				</footer>
-			</div>
-
-			Scripts
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script> -->
 </body>
 </html>
