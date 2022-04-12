@@ -52,6 +52,7 @@
   <link href="assets/css/responsive.css" rel="stylesheet" />
 
 <style type="text/css">
+
 * {
 	border: 0;
 	box-sizing: border-box;
