@@ -340,7 +340,7 @@ body {
                   <img src="./images/WineImg/WineImg<%= wineList.get(i).getWindId() %>.jpg" alt=""/>
                   </a>
                 </div>
-                <div class="detail-box"">
+                <div class="detail-box">
                   <span>
                  	<%= wineList.get(i).getWineName() %>
                   </span>
