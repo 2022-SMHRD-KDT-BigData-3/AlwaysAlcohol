@@ -302,12 +302,12 @@ body {
                     <br>
                     원산지 : <%= wineList.get(i).getCountry() %><br>
                     당도 : <%= wineList.get(i).getSweet() %><br>
-                    가격 : <%= wineList.get(i).getPrice() %>
+                    도수 : <%= wineList.get(i).getProof() %>
                   </p>
                   
                   <div class="options">
                     <h9>
-                     <%= wineList.get(i).getProof() %>
+                    <%= wineList.get(i).getPrice() %>
                     </h9>
                   </div>
                 </div>
