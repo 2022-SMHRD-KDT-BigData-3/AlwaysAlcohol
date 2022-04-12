@@ -241,11 +241,11 @@ body {
 								<section>
 									<form action="#" >
 									<div>
-									<span class="image fit"><img style="width: 500px; height: 713px; float: left; position: fixed; left: 9%; margin: 2%;bottom: 19%;" src="./images/WineImg/WineImg<%= result %>.jpg"alt="" /></span>
+									<span class="image fit"><img style="width: 500px; height: 713px; float: left; position: fixed; left: 9%; margin: 2%;bottom: -1%;border-radius: 4px;" src="./images/WineImg/WineImg<%= result %>.jpg"alt="" /></span>
 									</div>
 									
 									<div class="table-wrapper">
-										<table style="text-align:center; position: absolute;left: 33%;width: 40%;bottom: 22%;margin: 0 auto;height: 58%;font-size: large;">
+										<table style="text-align:center; position: absolute;left: 39%;width: 40%;bottom: 3%;margin: 0 auto;height: 73%;font-size: large;">
 											<thead>
 												<tr>
 													<th>이름</th>
