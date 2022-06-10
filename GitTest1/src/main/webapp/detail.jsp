@@ -227,13 +227,13 @@ body {
 					<h1 style="color:#585858; position: absolute;top: 10%;left: 12%;">와인정보</h1>
 					<div class="box alt">
 				</section>
-				<% 
-						String res = request.getParameter("wineId");
-						int wineId = Integer.parseInt(res);
-			
-						WineDAO dao = new WineDAO();
-						WineDTO dto = dao.selectWine(wineId);
-					%>
+				<%
+				String res = request.getParameter("wineId");
+				int wineId = Integer.parseInt(res);
+
+				WineDAO dao = new WineDAO();
+				WineDTO dto = dao.selectWine(wineId);
+				%>
 
 				<!-- Table -->
 				<section>

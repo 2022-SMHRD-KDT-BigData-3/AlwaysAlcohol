@@ -283,7 +283,7 @@ body {
               WineDAO dao = new WineDAO();
               ArrayList<WineDTO> wineList = dao.SerchWine(search);
                  
-                 %>
+              %>
         <% for(int i = 0 ; i < wineList.size() ; i++) {%>
           <div class="col-sm-6 col-lg-4 all pizza">
             <div class="box" style="height: 530px; width: 289px;">
